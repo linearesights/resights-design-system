@@ -1,0 +1,23 @@
+.v-menu__content {
+    margin-top: 2px;
+    box-shadow: $rs-semantic-shadow-lg-0-x $rs-semantic-shadow-lg-0-y $rs-semantic-shadow-lg-0-blur $rs-semantic-shadow-lg-0-spread $rs-semantic-shadow-lg-0-color, $rs-semantic-shadow-lg-1-x $rs-semantic-shadow-lg-1-y $rs-semantic-shadow-lg-1-blur $rs-semantic-shadow-lg-1-spread $rs-semantic-shadow-lg-1-color !important;
+    border: $rs-semantic-border-width-default solid $rs-semantic-color-border-subdued !important;
+    border-radius: $rs-semantic-border-radius-default !important;
+
+    .v-select-list {
+        background: $rs-semantic-color-surface-default !important;
+    }
+
+    .v-list-item{
+        &__content{
+            color: $rs-semantic-color-text-default;
+            font-weight: $rs-semantic-text-md-regular-font-weight !important;
+            line-height: $rs-semantic-text-md-regular-line-height !important;
+            font-size: $rs-semantic-text-md-regular-font-size !important;
+            letter-spacing: $rs-semantic-text-md-regular-letter-spacing !important;    
+        }
+        &--active{
+            background: $rs-semantic-color-surface-active;
+        }
+    }
+}
