@@ -4,10 +4,6 @@
     border: $rs-semantic-border-width-default solid $rs-semantic-color-border-subdued !important;
     border-radius: $rs-semantic-border-radius-default !important;
 
-    .v-select-list {
-        background: $rs-semantic-color-surface-default !important;
-    }
-
     .v-list-item{
         &__content{
             color: $rs-semantic-color-text-default;
@@ -16,8 +12,8 @@
             font-size: $rs-semantic-text-md-regular-font-size !important;
             letter-spacing: $rs-semantic-text-md-regular-letter-spacing !important;    
         }
-        &--active{
-            background: $rs-semantic-color-surface-active;
-        }
+        // &--active{
+        //     background: $rs-semantic-color-surface-active;
+        // }
     }
 }

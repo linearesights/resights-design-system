@@ -14,11 +14,6 @@
               <v-list-item-title>Typography</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
-          <v-list-item link to="/elevation">
-          <v-list-item-content>
-              <v-list-item-title>Elevation</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
           <v-list-item link to="/buttons">
           <v-list-item-content>
               <v-list-item-title>Buttons</v-list-item-title>

@@ -1,13 +1,46 @@
-.v-label{
+label{
     display: block;
-    font-size: $rs-component-label-md-medium-font-size !important;
-    font-weight: $rs-component-label-md-medium-font-weight !important;
-    line-height: $rs-component-label-md-medium-line-height !important;
-    letter-spacing: $rs-component-label-md-medium-letter-spacing !important;
-    text-transform: $rs-component-label-md-medium-text-case !important;
+    font-size: $rs-component-label-md-regular-font-size !important;
+    font-weight: $rs-component-label-md-regular-font-weight !important;
+    line-height: $rs-component-label-md-regular-line-height !important;
+    letter-spacing: $rs-component-label-md-regular-letter-spacing !important;
+    text-transform: $rs-component-label-md-regular-text-case !important;
+    color: $rs-semantic-color-text-default !important;
 
     // Margin reference missing in data
     margin-bottom: 5px !important;
+
+    &.medium {
+        font-size: $rs-component-label-md-regular-font-size !important;
+        font-weight: $rs-component-label-md-regular-font-weight !important;
+        line-height: $rs-component-label-md-regular-line-height !important;
+        letter-spacing: $rs-component-label-md-regular-letter-spacing !important;
+        text-transform: $rs-component-label-md-regular-text-case !important;
+        &.is-emphasized{
+            font-size: $rs-component-label-md-medium-font-size !important;
+            font-weight: $rs-component-label-md-medium-font-weight !important;
+            line-height: $rs-component-label-md-medium-line-height !important;
+            letter-spacing: $rs-component-label-md-medium-letter-spacing !important;
+            text-transform: $rs-component-label-md-medium-text-case !important;
+            text-decoration: $rs-component-label-md-medium-text-decoration !important;
+        }
+    }
+    &.small {
+        font-size: $rs-component-label-sm-regular-font-size !important;
+        font-weight: $rs-component-label-sm-regular-font-weight !important;
+        line-height: $rs-component-label-sm-regular-line-height !important;
+        letter-spacing: $rs-component-label-sm-regular-letter-spacing !important;
+        text-transform: $rs-component-label-sm-regular-text-case !important;
+        text-decoration: $rs-component-label-sm-regular-text-case !important;
+    }
+        &.is-emphasized{
+            font-size: $rs-component-label-sm-medium-font-size !important;
+            font-weight: $rs-component-label-sm-medium-font-weight !important;
+            line-height: $rs-component-label-sm-medium-line-height !important;
+            letter-spacing: $rs-component-label-sm-medium-letter-spacing !important;
+            text-transform: $rs-component-label-sm-medium-text-case !important;
+            text-decoration: $rs-component-label-sm-medium-text-decoration !important;
+        }
 }
 
 .v-input{
@@ -17,7 +50,7 @@
     transition: 0.2s !important;
     &:hover, &:focus{
         transition: .2s !important;
-        input, .v-input__slot {
+        input, &.v-input__slot {
             transition: .2s !important;
         }
     }
@@ -30,6 +63,7 @@
         }
     }
     &__slot{
+        transition: .2s !important;
         background: $rs-component-text-field-default-background-color !important;
         border: $rs-component-text-field-border-width-default solid $rs-component-text-field-default-border-color;
         box-shadow: $rs-component-text-field-shadow-default-x  $rs-component-text-field-shadow-default-y $rs-component-text-field-shadow-default-blur $rs-component-text-field-shadow-default-spread $rs-component-text-field-shadow-default-color !important;
@@ -51,7 +85,6 @@
         .v-input__slot{
             background: $rs-component-text-field-hover-background-color !important;
             border: $rs-component-text-field-border-width-default solid $rs-component-text-field-hover-border-color;
-            transition: .2s !important;
         }
     }
 
@@ -84,7 +117,6 @@
     }
 
     &.error--text{
-        // margin-bottom: 0 !important;
         input {
             color: $rs-component-text-field-error-text-color!important;
             &::placeholder{

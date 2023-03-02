@@ -1,8 +1,8 @@
 <template>
     <div>
-        <v-label>
+        <label :class="[labelIsEmphasized ? 'is-emphasized' : '', size]">
             <slot>Label</slot>
-        </v-label>
+        </label>
         <v-text-field
         solo
         hide-details="auto"
@@ -11,7 +11,7 @@
         :disabled="disabled"
         required
         :rules="rules"
-        value="Test"
+        :value="value"
         ></v-text-field>
     </div>
 </template>
@@ -31,6 +31,10 @@ export default {
             type: String,
             default: '',
         },
+        value: {
+            type: String,
+            default: '',
+        },
         disabled: {
             type: Boolean,
             default: false,
@@ -38,7 +42,11 @@ export default {
         rules: {
             type: Array,
             default: () => ([])
-        }
+        },
+        labelIsEmphasized: {
+            type: Boolean,
+            default: true,
+        },
     },
 };
   

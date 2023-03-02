@@ -1,8 +1,8 @@
 <template>
     <div>
-        <v-label>
+        <label>
             <slot>Label</slot>
-        </v-label>
+        </label>
         <v-select
         solo
         :items="items"
@@ -12,7 +12,7 @@
         :class="size"
         :disabled="disabled"
         :placeholder="placeholder"
-        required
+        :value="value"
         >
     </v-select>
     </div>
@@ -30,6 +30,10 @@ export default {
             },
         },
         placeholder: {
+            type: String,
+            default: '',
+        },
+        value: {
             type: String,
             default: '',
         },

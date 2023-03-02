@@ -1,24 +1,5 @@
 <template>
     <v-form class="ma-6">
-        <!-- <v-label>
-            Label
-        </v-label>
-        <v-text-field
-        solo
-        hide-details="auto"
-        placeholder="Placeholder"
-        class="medium"
-        ></v-text-field>
-        <v-label>
-            Label
-        </v-label>
-        <v-text-field
-        solo
-        hide-details="auto"
-        placeholder="Placeholder"
-        class="medium"
-        disabled
-        ></v-text-field> -->
         <h2>Text field</h2>
         <RsTextInput placeholder="Placeholder">
             Label
