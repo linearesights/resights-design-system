@@ -39,7 +39,7 @@ export default {
   ],
 
   styleResources: {
-    scss: ['/design-system-tokens/build/scss/*.scss']
+    scss: ['/resights-design-tokens/build/scss/*.scss']
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules

@@ -1,4 +1,4 @@
-import * as varibles from '~/design-system-tokens/build/js/variables.js'
+import * as varibles from '~/resights-design-tokens/build/js/variables.js'
 import Vue from "vue";
 import Vuetify from "vuetify";
 import selectInputArrow from "~/static/icons/input-arrow.vue"
