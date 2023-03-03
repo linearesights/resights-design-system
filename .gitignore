@@ -90,4 +90,4 @@ sw.*
 *.swp
 
 # Submodule
-./design-system-tokens
+./resights-design-tokens
