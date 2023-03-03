@@ -1,7 +1,7 @@
 ## Setup:
 
 ### Install dependencies
-`yarn install`
+`yarn`
 
 ### Add sub module including design tokens to the root of the project folder
 Repository: [resights-design-tokens](https://github.com/askesorensen/resights-design-tokens).
