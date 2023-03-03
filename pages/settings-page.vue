@@ -81,4 +81,8 @@ export default {
     margin: 2rem auto;
     max-width: 700px;
 }
+.v-form{
+    min-width: 100% !important;
+    padding: 0 !important;
+}
 </style>
