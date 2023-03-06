@@ -1,5 +1,5 @@
 <template>
-  <v-app id="resights">
+  <v-app id="resights" :class="theme">
     <v-layout>
       <!-- <v-app-bar title="Resights" /> -->
       <v-navigation-drawer permanent>
@@ -25,11 +25,13 @@
             </v-list-item-content>
           </v-list-item>
           <v-list-item link to="/settings-page">
-          <v-list-item-content>
+            <v-list-item-content>
               <v-list-item-title>Settings page</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </v-list>
+        <button @click="swap()">swap</button>
+        <p>{{ theme }}</p>
       </v-navigation-drawer>
 
       <v-main id="app-container" class="background">
@@ -45,7 +47,28 @@
   </v-app>
 </template>
 
+<script>
+  export default {
+    data() {
+      return {
+        theme: "light"
+      };
+    },
+    methods: {
+      swap() {
+        if (this.theme === "light") {
+          this.theme = "dark";
+        } else {
+          this.theme = "light";
+        }
+      }
+    }
+  }
+</script>
+
 <style lang="css">
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 html,
 body {
   height: 100%;
