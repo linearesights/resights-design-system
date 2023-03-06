@@ -12,8 +12,8 @@
             font-size: $rs-semantic-text-md-regular-font-size !important;
             letter-spacing: $rs-semantic-text-md-regular-letter-spacing !important;    
         }
-        // &--active{
-        //     background: $rs-semantic-color-surface-active;
-        // }
+        &--active{
+            background: $rs-semantic-color-surface-active;
+        }
     }
 }

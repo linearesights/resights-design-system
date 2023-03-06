@@ -9,6 +9,7 @@
         </RsTextInput>
         <h2>Select field</h2>
         <RsSelectInput :items="['a', 'b']">Sprog</RsSelectInput>
+        <v-autocomplete></v-autocomplete>
     </v-form>
 </template>
 
@@ -29,7 +30,7 @@ export default {
   }
 </script>
 
-<style>
+<style scoped>
     .v-form {
         max-width: 500px;
         background-color: white;

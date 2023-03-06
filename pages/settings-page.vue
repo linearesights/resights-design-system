@@ -1,10 +1,8 @@
 <template>
     <div>
         <v-card>
-            <v-card-item>
-                <v-card-title>Kontoindstillinger</v-card-title>
-                <v-card-subtitle>Opdater kontoindstillinger</v-card-subtitle>
-            </v-card-item>
+            <v-card-title>Kontoindstillinger</v-card-title>
+            <v-card-subtitle>Opdater kontoindstillinger</v-card-subtitle>
             <v-divider></v-divider>
             <v-card-text>
                 <v-form ref="form_one">
@@ -25,10 +23,8 @@
             </v-card-actions>
         </v-card>
         <v-card>
-            <v-card-item>
-                <v-card-title>Adgangskode</v-card-title>
-                <v-card-subtitle>Opdater adgangskode</v-card-subtitle>
-            </v-card-item>
+            <v-card-title>Adgangskode</v-card-title>
+            <v-card-subtitle>Opdater adgangskode</v-card-subtitle>
             <v-divider></v-divider>
             <v-card-text>
                 <v-form ref="form_two">
@@ -76,13 +72,12 @@ export default {
   }
 </script>
 
-<style>
+<style scoped>
 .v-card {
     margin: 2rem auto;
     max-width: 700px;
 }
-.v-form{
-    min-width: 100% !important;
+.v-form {
     padding: 0 !important;
 }
 </style>
