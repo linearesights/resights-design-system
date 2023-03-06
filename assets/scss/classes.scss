@@ -1,3 +1,3 @@
 .focus-ring {
-    box-shadow: $rs-semantic-focus-ring-0-x $rs-semantic-focus-ring-0-y $rs-semantic-focus-ring-0-blur $rs-semantic-focus-ring-0-spread $rs-semantic-focus-ring-0-color, $rs-semantic-focus-ring-1-x $rs-semantic-focus-ring-1-y $rs-semantic-focus-ring-1-blur $rs-semantic-focus-ring-1-spread $rs-semantic-focus-ring-1-color !important;
+    box-shadow: var(--rs-semantic-focus-ring-0-x) var(--rs-semantic-focus-ring-0-y) var(--rs-semantic-focus-ring-0-blur) var(--rs-semantic-focus-ring-0-spread) var(--rs-semantic-focus-ring-0-color), var(--rs-semantic-focus-ring-1-x) var(--rs-semantic-focus-ring-1-y) var(--rs-semantic-focus-ring-1-blur) var(--rs-semantic-focus-ring-1-spread) var(--rs-semantic-focus-ring-1-color) !important;
 }

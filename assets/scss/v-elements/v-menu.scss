@@ -1,19 +1,19 @@
 .v-menu__content {
     margin-top: 2px;
-    box-shadow: $rs-semantic-shadow-lg-0-x $rs-semantic-shadow-lg-0-y $rs-semantic-shadow-lg-0-blur $rs-semantic-shadow-lg-0-spread $rs-semantic-shadow-lg-0-color, $rs-semantic-shadow-lg-1-x $rs-semantic-shadow-lg-1-y $rs-semantic-shadow-lg-1-blur $rs-semantic-shadow-lg-1-spread $rs-semantic-shadow-lg-1-color !important;
-    border: $rs-semantic-border-width-default solid $rs-semantic-color-border-subdued !important;
-    border-radius: $rs-semantic-border-radius-default !important;
+    box-shadow: var--(rs-semantic-shadow-lg-0-x) var--(rs-semantic-shadow-lg-0-y) var--(rs-semantic-shadow-lg-0-blur) var--(rs-semantic-shadow-lg-0-spread) var--(rs-semantic-shadow-lg-0-color), var--(rs-semantic-shadow-lg-1-x) var--(rs-semantic-shadow-lg-1-y) var--(rs-semantic-shadow-lg-1-blur) var--(rs-semantic-shadow-lg-1-spread) var--(rs-semantic-shadow-lg-1-color) !important;
+    border: var--(rs-semantic-border-width-default) solid var--(rs-semantic-color-border-subdued) !important;
+    border-radius: var--(rs-semantic-border-radius-default) !important;
 
     .v-list-item{
         &__content{
-            color: $rs-semantic-color-text-default;
-            font-weight: $rs-semantic-text-md-regular-font-weight !important;
-            line-height: $rs-semantic-text-md-regular-line-height !important;
-            font-size: $rs-semantic-text-md-regular-font-size !important;
-            letter-spacing: $rs-semantic-text-md-regular-letter-spacing !important;    
+            color: var--(rs-semantic-color-text-default);
+            font-weight: var--(rs-semantic-text-md-regular-font-weight) !important;
+            line-height: var--(rs-semantic-text-md-regular-line-height) !important;
+            font-size: var--(rs-semantic-text-md-regular-font-size) !important;
+            letter-spacing: var--(rs-semantic-text-md-regular-letter-spacing) !important;    
         }
         &--active{
-            background: $rs-semantic-color-surface-active;
+            background: var--(rs-semantic-color-surface-active);
         }
     }
 }

@@ -10,98 +10,98 @@
 
     // Sizing
     &.v-size--small{
-        padding: $rs-component-button-sm-default-padding-y $rs-component-button-sm-default-padding-x !important;
+        padding: var(--rs-component-button-sm-default-padding-y) var(--rs-component-button-sm-default-padding-x) !important;
     }
-    &.v-size--medium{
-        padding: $rs-component-button-md-default-padding-y $rs-component-button-md-default-padding-x !important;
+    &v-size--medium{
+        padding: var(--rs-component-button-md-default-padding-y) var(--rs-component-button-md-default-padding-x) !important;
     }
     &.v-size--large{
-        padding: $rs-component-button-lg-default-padding-y $rs-component-button-lg-default-padding-x !important;
+        padding: var(--rs-component-button-lg-default-padding-y) var(--rs-component-button-lg-default-padding-x) !important;
     }
 
     // Variants
     &.primary {
-        background-color: $rs-component-button-primary-default-background-color !important;
-        color: $rs-component-button-primary-default-text-color !important;
+        background-color: var(--rs-component-button-primary-default-background-color) !important;
+        color: var(--rs-component-button-primary-default-text-color) !important;
         &:hover {
-            background-color: $rs-component-button-primary-hover-background-color !important;
-            color: $rs-component-button-primary-hover-text-color !important;
+            background-color: var(--rs-component-button-primary-hover-background-color) !important;
+            color: var(--rs-component-button-primary-hover-text-color) !important;
         }
         &:active {
-            background-color: $rs-component-button-primary-pressed-background-color !important;
-            color: $rs-component-button-primary-pressed-text-color !important;
+            background-color: var(--rs-component-button-primary-pressed-background-color) !important;
+            color: var(--rs-component-button-primary-pressed-text-color) !important;
         }
         &:focus-visible {
-            background-color: $rs-component-button-primary-focus-background-color !important;
-            color: $rs-component-button-primary-focus-text-color !important;
+            background-color: var(--rs-component-button-primary-focus-background-color) !important;
+            color: var(--rs-component-button-primary-focus-text-color) !important;
             @extend .focus-ring
         }
         &.v-btn--disabled{
-            background-color: $rs-component-button-primary-disabled-background-color !important;
-            color: $rs-component-button-primary-disabled-text-color !important;
+            background-color: var(--rs-component-button-primary-disabled-background-color) !important;
+            color: var(--rs-component-button-primary-disabled-text-color) !important;
         }
     }
     &.secondary {
-        background-color: $rs-component-button-secondary-default-background-color !important;
-        color: $rs-component-button-secondary-default-text-color !important;
+        background-color: var(--rs-component-button-secondary-default-background-color) !important;
+        color: var(--rs-component-button-secondary-default-text-color) !important;
         &:hover {
-            background-color: $rs-component-button-secondary-hover-background-color !important;
-            color: $rs-component-button-secondary-hover-text-color !important;
+            background-color: var(--rs-component-button-secondary-hover-background-color) !important;
+            color: var(--rs-component-button-secondary-hover-text-color) !important;
         }
         &:active {
-            background-color: $rs-component-button-secondary-pressed-background-color !important;
-            color: $rs-component-button-secondary-pressed-text-color !important;
+            background-color: var(--rs-component-button-secondary-pressed-background-color) !important;
+            color: var(--rs-component-button-secondary-pressed-text-color) !important;
         }
         &:focus-visible {
-            background-color: $rs-component-button-secondary-focus-background-color !important;
-            color: $rs-component-button-secondary-focus-text-color !important;
+            background-color: var(--rs-component-button-secondary-focus-background-color) !important;
+            color: var(--rs-component-button-secondary-focus-text-color) !important;
             @extend .focus-ring
         }
         &.v-btn--disabled{
-            background-color: $rs-component-button-secondary-disabled-background-color !important;
-            color: $rs-component-button-secondary-disabled-text-color !important;
+            background-color: var(--rs-component-button-secondary-disabled-background-color) !important;
+            color: var(--rs-component-button-secondary-disabled-text-color) !important;
         }
     }
     &.tertiary {
-        background-color: $rs-component-button-tertiary-default-background-color !important;
-        color: $rs-component-button-tertiary-default-text-color !important;
+        background-color: var(--rs-component-button-tertiary-default-background-color) !important;
+        color: var(--rs-component-button-tertiary-default-text-color) !important;
         &:hover {
-            background-color: $rs-component-button-tertiary-hover-background-color !important;
-            color: $rs-component-button-tertiary-hover-text-color !important;
+            background-color: var(--rs-component-button-tertiary-hover-background-color) !important;
+            color: var(--rs-component-button-tertiary-hover-text-color) !important;
         }
         &:active {
-            background-color: $rs-component-button-tertiary-pressed-background-color !important;
-            color: $rs-component-button-tertiary-pressed-text-color !important;
+            background-color: var(--rs-component-button-tertiary-pressed-background-color) !important;
+            color: var(--rs-component-button-tertiary-pressed-text-color) !important;
         }
         &:focus-visible {
-            background-color: $rs-component-button-tertiary-focus-background-color !important;
-            color: $rs-component-button-tertiary-focus-text-color !important;
+            background-color: var(--rs-component-button-tertiary-focus-background-color) !important;
+            color: var(--rs-component-button-tertiary-focus-text-color) !important;
             @extend .focus-ring
         }
         &.v-btn--disabled{
-            background-color: $rs-component-button-tertiary-disabled-background-color !important;
-            color: $rs-component-button-tertiary-disabled-text-color !important;
+            background-color: var(--rs-component-button-tertiary-disabled-background-color) !important;
+            color: var(--rs-component-button-tertiary-disabled-text-color) !important;
         }
     }
     &.ghost {
-        background-color: $rs-component-button-ghost-default-background-color !important;
-        color: $rs-component-button-ghost-default-text-color !important;
+        background-color: var(--rs-component-button-ghost-default-background-color) !important;
+        color: var(--rs-component-button-ghost-default-text-color) !important;
         &:hover {
-            background-color: $rs-component-button-ghost-hover-background-color !important;
-            color: $rs-component-button-ghost-hover-text-color !important;
+            background-color: var(--rs-component-button-ghost-hover-background-color) !important;
+            color: var(--rs-component-button-ghost-hover-text-color) !important;
         }
         &:active {
-            background-color: $rs-component-button-ghost-pressed-background-color !important;
-            color: $rs-component-button-ghost-pressed-text-color !important;
+            background-color: var(--rs-component-button-ghost-pressed-background-color) !important;
+            color: var(--rs-component-button-ghost-pressed-text-color) !important;
         }
         &:focus-visible {
-            background-color: $rs-component-button-ghost-focus-background-color !important;
-            color: $rs-component-button-ghost-focus-text-color !important;
+            background-color: var(--rs-component-button-ghost-focus-background-color) !important;
+            color: var(--rs-component-button-ghost-focus-text-color) !important;
             @extend .focus-ring
         }
         &.v-btn--disabled{
-            background-color: $rs-component-button-ghost-disabled-background-color !important;
-            color: $rs-component-button-ghost-disabled-text-color !important;
+            background-color: var(--rs-component-button-ghost-disabled-background-color) !important;
+            color: var(--rs-component-button-ghost-disabled-text-color) !important;
         }
     }
 }
@@ -110,4 +110,3 @@
 .v-ripple__container {
     opacity: 0 !important;
  }
- 

@@ -30,8 +30,10 @@
             </v-list-item-content>
           </v-list-item>
         </v-list>
-        <button @click="swap()">swap</button>
-        <p>{{ theme }}</p>
+        <v-list-item class="theme-switcher">
+          <v-switch hide-details="auto" @click="swap()"></v-switch>
+          <label>Toggle theme</label>
+        </v-list-item>
       </v-navigation-drawer>
 
       <v-main id="app-container" class="background">
@@ -66,7 +68,7 @@
   }
 </script>
 
-<style lang="css">
+<style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 html,
@@ -89,5 +91,20 @@ body {
 }
 .v-navigation-drawer{
   z-index: 100;
+}
+
+.theme-switcher {
+  .v-input {
+    &__slot{
+      border-radius: 20px;
+      border: none !important;
+      box-shadow: none !important;
+      padding: 5px;
+    }
+    &__control{
+      flex-grow: 0;
+      width: unset;
+    }
+  }
 }
 </style>

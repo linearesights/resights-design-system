@@ -1,45 +1,45 @@
 label{
     display: block;
-    font-size: $rs-component-label-md-regular-font-size !important;
-    font-weight: $rs-component-label-md-regular-font-weight !important;
-    line-height: $rs-component-label-md-regular-line-height !important;
-    letter-spacing: $rs-component-label-md-regular-letter-spacing !important;
-    text-transform: $rs-component-label-md-regular-text-case !important;
-    color: $rs-semantic-color-text-default !important;
+    font-size: var(--rs-component-label-md-regular-font-size) !important;
+    font-weight: var(--rs-component-label-md-regular-font-weight) !important;
+    line-height: var(--rs-component-label-md-regular-line-height) !important;
+    letter-spacing: var(--rs-component-label-md-regular-letter-spacing) !important;
+    text-transform: var(--rs-component-label-md-regular-text-case) !important;
+    color: var(--rs-semantic-color-text-default) !important;
 
     // Margin reference missing in data
     margin-bottom: 5px !important;
 
     &.medium {
-        font-size: $rs-component-label-md-regular-font-size !important;
-        font-weight: $rs-component-label-md-regular-font-weight !important;
-        line-height: $rs-component-label-md-regular-line-height !important;
-        letter-spacing: $rs-component-label-md-regular-letter-spacing !important;
-        text-transform: $rs-component-label-md-regular-text-case !important;
+        font-size: var(--rs-component-label-md-regular-font-size) !important;
+        font-weight: var(--rs-component-label-md-regular-font-weight) !important;
+        line-height: var(--rs-component-label-md-regular-line-height) !important;
+        letter-spacing: var(--rs-component-label-md-regular-letter-spacing) !important;
+        text-transform: var(--rs-component-label-md-regular-text-case) !important;
         &.is-emphasized{
-            font-size: $rs-component-label-md-medium-font-size !important;
-            font-weight: $rs-component-label-md-medium-font-weight !important;
-            line-height: $rs-component-label-md-medium-line-height !important;
-            letter-spacing: $rs-component-label-md-medium-letter-spacing !important;
-            text-transform: $rs-component-label-md-medium-text-case !important;
-            text-decoration: $rs-component-label-md-medium-text-decoration !important;
+            font-size: var(--rs-component-label-md-medium-font-size) !important;
+            font-weight: var(--rs-component-label-md-medium-font-weight) !important;
+            line-height: var(--rs-component-label-md-medium-line-height) !important;
+            letter-spacing: var(--rs-component-label-md-medium-letter-spacing) !important;
+            text-transform: var(--rs-component-label-md-medium-text-case) !important;
+            text-decoration: var(--rs-component-label-md-medium-text-decoration) !important;
         }
     }
     &.small {
-        font-size: $rs-component-label-sm-regular-font-size !important;
-        font-weight: $rs-component-label-sm-regular-font-weight !important;
-        line-height: $rs-component-label-sm-regular-line-height !important;
-        letter-spacing: $rs-component-label-sm-regular-letter-spacing !important;
-        text-transform: $rs-component-label-sm-regular-text-case !important;
-        text-decoration: $rs-component-label-sm-regular-text-case !important;
+        font-size: var(--rs-component-label-sm-regular-font-size) !important;
+        font-weight: var(--rs-component-label-sm-regular-font-weight) !important;
+        line-height: var(--rs-component-label-sm-regular-line-height) !important;
+        letter-spacing: var(--rs-component-label-sm-regular-letter-spacing) !important;
+        text-transform: var(--rs-component-label-sm-regular-text-case) !important;
+        text-decoration: var(--rs-component-label-sm-regular-text-case) !important;
     }
         &.is-emphasized{
-            font-size: $rs-component-label-sm-medium-font-size !important;
-            font-weight: $rs-component-label-sm-medium-font-weight !important;
-            line-height: $rs-component-label-sm-medium-line-height !important;
-            letter-spacing: $rs-component-label-sm-medium-letter-spacing !important;
-            text-transform: $rs-component-label-sm-medium-text-case !important;
-            text-decoration: $rs-component-label-sm-medium-text-decoration !important;
+            font-size: var(--rs-component-label-sm-medium-font-size) !important;
+            font-weight: var(--rs-component-label-sm-medium-font-weight) !important;
+            line-height: var(--rs-component-label-sm-medium-line-height) !important;
+            letter-spacing: var(--rs-component-label-sm-medium-letter-spacing) !important;
+            text-transform: var(--rs-component-label-sm-medium-text-case) !important;
+            text-decoration: var(--rs-component-label-sm-medium-text-decoration) !important;
         }
 }
 
@@ -56,17 +56,17 @@ label{
     }
 
     input {
-        color: $rs-component-text-field-default-text-color !important;
+        color: var(--rs-component-text-field-default-text-color) !important;
         transition: .2s !important;
         &::placeholder{
-            color: $rs-component-text-field-default-placeholder-color !important;
+            color: var(--rs-component-text-field-default-placeholder-color) !important;
         }
     }
     &__slot{
         transition: .2s !important;
-        background: $rs-component-text-field-default-background-color !important;
-        border: $rs-component-text-field-border-width-default solid $rs-component-text-field-default-border-color;
-        box-shadow: $rs-component-text-field-shadow-default-x  $rs-component-text-field-shadow-default-y $rs-component-text-field-shadow-default-blur $rs-component-text-field-shadow-default-spread $rs-component-text-field-shadow-default-color !important;
+        background: var(--rs-component-text-field-default-background-color) !important;
+        border: var(--rs-component-text-field-border-width-default) solid var(--rs-component-text-field-default-border-color);
+        box-shadow: var(--rs-component-text-field-shadow-default-x)  var(--rs-component-text-field-shadow-default-y) var(--rs-component-text-field-shadow-default-blur) var(--rs-component-text-field-shadow-default-spread) var(--rs-component-text-field-shadow-default-color) !important;
         margin-bottom: 0 !important;
         
     }
@@ -77,82 +77,82 @@ label{
     // States
     &:hover{
         input {
-            color: $rs-component-text-field-hover-text-color !important;
+            color: var(--rs-component-text-field-hover-text-color) !important;
             &::placeholder{
-                color: $rs-component-text-field-hover-placeholder-color !important;
+                color: var(--rs-component-text-field-hover-placeholder-color) !important;
             }
         }
         .v-input__slot{
-            background: $rs-component-text-field-hover-background-color !important;
-            border: $rs-component-text-field-border-width-default solid $rs-component-text-field-hover-border-color;
+            background: var(--rs-component-text-field-hover-background-color) !important;
+            border: var(--rs-component-text-field-border-width-default) solid var(--rs-component-text-field-hover-border-color);
         }
     }
 
     &--is-focused{
         input {
-            color: $rs-component-text-field-focus-text-color !important;
+            color: var(--rs-component-text-field-focus-text-color) !important;
             &::placeholder{
-                color: $rs-component-text-field-focus-placeholder-color !important;
+                color: var(--rs-component-text-field-focus-placeholder-color) !important;
             }
         }
         .v-input__slot{
             @extend .focus-ring;
-            background: $rs-component-text-field-focus-background-color !important;
-            border: $rs-component-text-field-border-width-default solid $rs-component-text-field-focus-border-color;
+            background: var(--rs-component-text-field-focus-background-color) !important;
+            border: var(--rs-component-text-field-border-width-default) solid var(--rs-component-text-field-focus-border-color);
         }
     }
     
     &--is-disabled {
         pointer-events: none;
         .v-input__slot{
-            border: $rs-component-text-field-border-width-default solid $rs-component-text-field-disabled-border-color;
-            background: $rs-component-text-field-disabled-background-color !important;
+            border: var(--rs-component-text-field-border-width-default) solid var(--rs-component-text-field-disabled-border-color);
+            background: var(--rs-component-text-field-disabled-background-color) !important;
         }
         input{
-            color: $rs-component-text-field-disabled-text-color !important;
+            color: var(--rs-component-text-field-disabled-text-color) !important;
             &::placeholder{
-                color: $rs-component-text-field-disabled-placeholder-color !important;
+                color: var(--rs-component-text-field-disabled-placeholder-color) !important;
             }
         }
     }
 
     &.error--text{
         input {
-            color: $rs-component-text-field-error-text-color!important;
+            color: var(--rs-component-text-field-error-text-color) !important;
             &::placeholder{
-                color: $rs-component-text-field-error-placeholder-color !important;
+                color: var(--rs-component-text-field-error-placeholder-color) !important;
             }
         }
         .v-input__slot{
-            background: $rs-component-text-field-error-background-color !important;
-            border: $rs-component-text-field-border-width-default solid $rs-component-text-field-error-border-color;
+            background: var(--rs-component-text-field-error-background-color) !important;
+            border: var(--rs-component-text-field-border-width-default) solid var(--rs-component-text-field-error-border-color);
         }
     }
 
     // Help text
     .v-messages{
-        color: $rs-semantic-color-text-subdued !important;
-        font-weight: $rs-component-help-text-text-font-weight !important;
-        line-height: $rs-component-help-text-text-line-height !important;
-        font-size: $rs-component-help-text-text-font-size !important;
-        letter-spacing: $rs-component-help-text-text-letter-spacing !important;
-        text-transform: $rs-component-help-text-text-text-case !important;
-        text-decoration: $rs-component-help-text-text-text-decoration !important;
+        color: var(--rs-semantic-color-text-subdued) !important;
+        font-weight: var(--rs-component-help-text-text-font-weight) !important;
+        line-height: var(--rs-component-help-text-text-line-height) !important;
+        font-size: var(--rs-component-help-text-text-font-size) !important;
+        letter-spacing: var(--rs-component-help-text-text-letter-spacing) !important;
+        text-transform: var(--rs-component-help-text-text-text-case) !important;
+        text-decoration: var(--rs-component-help-text-text-text-decoration) !important;
     }
     .v-text-field__details {
         padding-left: 0 !important;
-        margin-top: $rs-component-help-text-padding-t;;
+        margin-top: var(--rs-component-help-text-padding-t);
     }
 
     // Sizing
     &.medium{
         .v-input__slot {
-            height: $rs-component-text-field-md-height;
+            height: var(--rs-component-text-field-md-height);
         }
     }
     &.small{
         .v-input__slot {
-            height: $rs-component-text-field-sm-height;
+            height: var(--rs-component-text-field-sm-height);
         }
     }
 }

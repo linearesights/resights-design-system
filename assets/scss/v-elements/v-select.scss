@@ -2,29 +2,29 @@
     .v-icon{
         &__component {
             display: flex;
-            width: $rs-semantic-size-comp-xxs;
-            height: $rs-semantic-size-comp-xxs;
+            width: var(--rs-semantic-size-comp-xxs);
+            height: var(--rs-semantic-size-comp-xxs);
             svg {
-                color: $rs-component-text-field-default-icon-color !important;
+                color: var(--rs-component-text-field-default-icon-color) !important;
             }
         }
     }
     &--is-menu-active{
         .v-input__icon--append{
                 svg {
-                    color: $rs-component-text-field-default-icon-color !important;
+                    color: var(--rs-component-text-field-default-icon-color) !important;
                 }
         }
     }
     &.v-input--is-focused {
         .v-input__icon--append{
             svg {
-                color: $rs-component-text-field-default-icon-color !important;
+                color: var(--rs-component-text-field-default-icon-color) !important;
             }
         }
     }
 }
 
 .v-select-list {
-    background: $rs-semantic-color-surface-default !important;
+    background: var(--rs-semantic-color-surface-default) !important;
 }

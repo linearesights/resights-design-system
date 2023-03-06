@@ -1,15 +1,15 @@
-$btn-text-transform: $rs-semantic-text-case-buttons;
-$btn-font-weight: $rs-component-button-sm-label-font-weight;
-$btn-rounded-border-radius: $rs-component-button-border-radius-default;
-$btn-round-border-radius: $rs-component-button-border-radius-default;
-$btn-border-radius: $rs-component-button-border-radius-default;
+$btn-text-transform: var(--rs-semantic-text-case-buttons);
+$btn-font-weight: var(--rs-component-button-sm-label-font-weight);
+$btn-rounded-border-radius: var(--rs-component-button-border-radius-default);
+$btn-round-border-radius: var(--rs-component-button-border-radius-default);
+$btn-border-radius: var(--rs-component-button-border-radius-default);
 $btn-focus-opacity: 1;
 $btn-hover-opacity: 1;
 $btn-active-opacity: 1;
 
 $btn-font-sizes:(
-    'small': $rs-component-button-sm-label-font-size,
-    'medium': $rs-component-button-md-label-font-size,
-    'large': $rs-component-button-lg-label-font-size,
+    'small': var(--rs-component-button-sm-label-font-size),
+    'medium': var(--rs-component-button-md-label-font-size),
+    'large': var(--rs-component-button-lg-label-font-size),
 );
 

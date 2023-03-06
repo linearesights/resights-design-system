@@ -1,20 +1,21 @@
 .v-card {
     max-width: 700px;
-    border: $rs-semantic-border-width-default solid $rs-semantic-color-border-subdued !important;
+    border: var(--rs-semantic-border-width-default) solid var(--rs-semantic-color-border-subdued) !important;
+    background-color: var(--rs-semantic-color-surface-default) !important;
 
-    box-shadow: $rs-semantic-shadow-md-0-x $rs-semantic-shadow-md-0-y $rs-semantic-shadow-md-0-blur $rs-semantic-shadow-md-0-spread $rs-semantic-shadow-md-0-color,
-                $rs-semantic-shadow-md-1-x $rs-semantic-shadow-md-1-y $rs-semantic-shadow-md-1-blur $rs-semantic-shadow-md-1-spread $rs-semantic-shadow-md-1-color
+    box-shadow: var(--rs-semantic-shadow-md-0-x) var(--rs-semantic-shadow-md-0-y) var(--rs-semantic-shadow-md-0-blur) var(--rs-semantic-shadow-md-0-spread) var(--rs-semantic-shadow-md-0-color),
+                var(--rs-semantic-shadow-md-1-x) var(--rs-semantic-shadow-md-1-y) var(--rs-semantic-shadow-md-1-blur) var(--rs-semantic-shadow-md-1-spread) var(--rs-semantic-shadow-md-1-color)
                 !important;
     &__title {
-        color: $rs-semantic-color-text-default !important;
+        color: var(--rs-semantic-color-text-default) !important;
     }
     &__subtitle {
-        color: $rs-semantic-color-text-subdued !important;
+        color: var(--rs-semantic-color-text-subdued) !important;
     }
     &__actions {
         justify-content: flex-end;
     }
 }
 .v-divider {
-    border-color: $rs-semantic-color-border-divider !important;
+    border-color: var(--rs-semantic-color-border-divider) !important;
 }
