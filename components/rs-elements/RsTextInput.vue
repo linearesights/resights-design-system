@@ -1,6 +1,6 @@
 <template>
     <div>
-        <label :class="[labelIsEmphasized ? 'is-emphasized' : '', size]">
+        <label :class="[labelIsEmphasized ? 'is-emphasized' : '', 'small']">
             <slot>Label</slot>
         </label>
         <v-text-field
@@ -12,6 +12,7 @@
         required
         :rules="rules"
         :value="value"
+        :prepend-inner-icon="icon"
         ></v-text-field>
     </div>
 </template>
@@ -35,6 +36,10 @@ export default {
             type: String,
             default: '',
         },
+        value: {
+            type: String,
+            default: '',
+        },
         disabled: {
             type: Boolean,
             default: false,
@@ -46,6 +51,10 @@ export default {
         labelIsEmphasized: {
             type: Boolean,
             default: true,
+        },
+        icon: {
+            type: String,
+            default: '',
         },
     },
 };

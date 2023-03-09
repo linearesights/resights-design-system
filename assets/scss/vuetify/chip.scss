@@ -1,0 +1,16 @@
+$icon-sizes:(
+    'small': (
+      'font-size': var(--rs-component-chip-sm-label-font-size),
+      'height': var(--rs-component-chip-sm-height),
+    ),
+    'medium': (
+      'font-size': var(--rs-component-chip-md-label-font-size),
+      'height': var(--rs-component-chip-md-height)
+    ),
+    'default': (
+      'font-size': var(--rs-component-chip-md-label-font-size),
+      'height': var(--rs-component-chip-md-height)
+    ),
+);
+
+$chip-padding: var(--rs-component-chip-md-default-padding-x) var(--rs-component-chip-md-default-padding-y);

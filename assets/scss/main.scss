@@ -1,7 +1,9 @@
 @import '~/assets/design-tokens/design-tokens';
+@import './classes';
 @import './v-elements/v-btn';
-@import './v-elements/v-text-field';
+@import './v-elements/inputFields';
 @import './v-elements/v-select';
 @import './v-elements/v-menu';
 @import './v-elements/v-card';
-@import './classes';
+@import './v-elements/v-chip';
+@import './v-elements/v-treeview';

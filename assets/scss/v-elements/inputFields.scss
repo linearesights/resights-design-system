@@ -47,7 +47,7 @@ label{
     // Margin reference missing in data
     margin-bottom: 1.1rem !important;
     
-    transition: 0.2s !important;
+    transition: .2s !important;
     &:hover, &:focus{
         transition: .2s !important;
         input, &.v-input__slot {
@@ -68,10 +68,20 @@ label{
         border: var(--rs-component-text-field-border-width-default) solid var(--rs-component-text-field-default-border-color);
         box-shadow: var(--rs-component-text-field-shadow-default-x)  var(--rs-component-text-field-shadow-default-y) var(--rs-component-text-field-shadow-default-blur) var(--rs-component-text-field-shadow-default-spread) var(--rs-component-text-field-shadow-default-color) !important;
         margin-bottom: 0 !important;
-        
     }
     &__control{
         min-height: unset !important;
+    }
+    &__prepend-inner{
+        padding: 0 !important;
+    }
+    &__icon--prepend-inner{
+        min-width: unset !important;
+        width: unset !important;
+        height: unset !important;
+        svg {
+            color: var(--rs-component-text-field-default-icon-color) !important;
+        }
     }
 
     // States
@@ -86,8 +96,11 @@ label{
             background: var(--rs-component-text-field-hover-background-color) !important;
             border: var(--rs-component-text-field-border-width-default) solid var(--rs-component-text-field-hover-border-color);
         }
+        .v-input__icon--prepend-inner svg{
+            color: var(--rs-component-text-field-hover-icon-color) !important;
+        }
     }
-
+    
     &--is-focused{
         input {
             color: var(--rs-component-text-field-focus-text-color) !important;
@@ -99,6 +112,9 @@ label{
             @extend .focus-ring;
             background: var(--rs-component-text-field-focus-background-color) !important;
             border: var(--rs-component-text-field-border-width-default) solid var(--rs-component-text-field-focus-border-color);
+        }
+        .v-input__icon--prepend-inner svg{
+            color: var(--rs-component-text-field-focus-icon-color) !important;
         }
     }
     
@@ -114,8 +130,11 @@ label{
                 color: var(--rs-component-text-field-disabled-placeholder-color) !important;
             }
         }
+        .v-input__icon--prepend-inner svg{
+            color: var(--rs-component-text-field-disabled-icon-color) !important;
+        }
     }
-
+    
     &.error--text{
         input {
             color: var(--rs-component-text-field-error-text-color) !important;
@@ -126,6 +145,9 @@ label{
         .v-input__slot{
             background: var(--rs-component-text-field-error-background-color) !important;
             border: var(--rs-component-text-field-border-width-default) solid var(--rs-component-text-field-error-border-color);
+        }
+        .v-input__icon--prepend-inner svg {
+            color: var(--rs-component-text-field-error-icon-color) !important;
         }
     }
 
@@ -148,11 +170,42 @@ label{
     &.medium{
         .v-input__slot {
             height: var(--rs-component-text-field-md-height);
+            padding-left: var(--rs-component-text-field-md-padding-x) !important;
+            padding-right: var(--rs-component-text-field-md-padding-x) !important;
+            gap: var(--rs-semantic-space-between-comp-md);
+        }
+        .v-input__icon--prepend-inner svg{
+            height: var(--rs-semantic-size-comp-sm) !important;
+            width: var(--rs-semantic-size-comp-sm) !important;
         }
     }
     &.small{
         .v-input__slot {
             height: var(--rs-component-text-field-sm-height);
+            padding-left: var(--rs-component-text-field-sm-padding-x) !important;
+            padding-right: var(--rs-component-text-field-sm-padding-x) !important;
+            gap: var(--rs-semantic-space-between-comp-sm);
+        }
+        .v-input__icon--prepend-inner svg{
+            height: var(--rs-semantic-size-comp-xs) !important;
+            width: var(--rs-semantic-size-comp-xs) !important;
+        }
+    }
+}
+
+.split-field {
+    display: flex;
+    .left-field{
+        border-radius: var(--rs-component-text-field-border-radius-default) var(--rs-component-text-field-border-radius-split-field) var(--rs-component-text-field-border-radius-split-field) var(--rs-component-text-field-border-radius-default);
+        &:hover {
+            z-index: 1;
+        }
+    }
+    .right-field{
+        margin-left: calc(var(--rs-component-text-field-border-width-default) * -1) !important;
+        border-radius:  var(--rs-component-text-field-border-radius-split-field) var(--rs-component-text-field-border-radius-default) var(--rs-component-text-field-border-radius-default) var(--rs-component-text-field-border-radius-split-field);
+        &:hover {
+            z-index: 1;
         }
     }
 }

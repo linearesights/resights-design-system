@@ -1,23 +1,28 @@
 .v-select {
-    .v-icon{
-        &__component {
+    .v-input__append-inner {
+        padding-left: 0 !important;
+    }
+    .v-input__icon {
+        width: var(--rs-semantic-size-comp-sm) !important;
+        height: var(--rs-semantic-size-comp-sm) !important;
+        min-width: unset !important;
+    }
+    .v-input__icon--append, .v-input__icon--clear {
             display: flex;
-            width: var(--rs-semantic-size-comp-xxs);
-            height: var(--rs-semantic-size-comp-xxs);
             svg {
-                color: var(--rs-component-text-field-default-icon-color) !important;
+                width: var(--rs-semantic-size-comp-sm) !important;
+                height: var(--rs-semantic-size-comp-sm) !important;
             }
-        }
     }
     &--is-menu-active{
-        .v-input__icon--append{
+        .v-input__icon--append, .v-input__icon--clear{
                 svg {
                     color: var(--rs-component-text-field-default-icon-color) !important;
                 }
         }
     }
     &.v-input--is-focused {
-        .v-input__icon--append{
+        .v-input__icon--append, .v-input__icon--clear{
             svg {
                 color: var(--rs-component-text-field-default-icon-color) !important;
             }

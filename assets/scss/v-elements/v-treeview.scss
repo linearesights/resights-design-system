@@ -1,0 +1,113 @@
+.v-treeview {
+    border: var(--rs-component-text-field-border-width-default) solid var(--rs-component-text-field-default-border-color);
+    border-top: 0px;
+    border-radius: 0px 0px var(--rs-component-text-field-border-radius-default) var(--rs-component-text-field-border-radius-default) !important;
+    .v-treeview-node {
+        &__toggle {
+            width: var(--rs-semantic-size-comp-sm) !important;
+            height: var(--rs-semantic-size-comp-sm) !important;
+            &::after{
+            opacity: 0 !important;
+            }
+        }
+        &__label{
+            font-size: var(--rs-component-label-md-regular-font-size) !important;
+            font-weight: var(--rs-component-label-md-regular-font-weight) !important;
+            line-height: var(--rs-component-label-md-regular-line-height) !important;
+            letter-spacing: var(--rs-component-label-md-regular-letter-spacing) !important;
+            text-transform: var(--rs-component-label-md-regular-text-case) !important;
+        }
+        &__root{
+            min-height: var(--rs-component-text-field-md-height) !important;
+        }
+        &__content{
+            margin-left: var(--rs-semantic-space-between-comp-md) !important;
+        }
+        &__checkbox{
+            background-color: var(--rs-component-checkbox-default-background-color);
+            height: 16px;
+            width: 16px;
+            border: var(--rs-component-checkbox-border-width-default) solid var(--rs-component-checkbox-default-border-color);
+            border-radius: var(--rs-component-checkbox-border-radius-default);
+            box-shadow: var(--rs-component-checkbox-shadow-default-x) var(--rs-component-checkbox-shadow-default-y) var(--rs-component-checkbox-shadow-default-blur) var(--rs-component-checkbox-shadow-default-spread) var(--rs-component-checkbox-shadow-default-color);
+            svg {
+                color: var(--rs-component-checkbox-default-on-selected);
+                height: 7px;
+                width: auto;
+            }
+            &::after{
+                opacity: 0 !important;
+            }            
+
+            // states
+            &:focus-visible{
+                background-color: var(--rs-component-checkbox-focus-background-color);
+                border: var(--rs-component-checkbox-border-width-default) solid var(--rs-component-checkbox-focus-border-color);
+                @extend .focus-ring;
+                svg {
+                    color: var(--rs-component-checkbox-focus-on-selected);
+                }
+            }
+            &:hover{
+                background-color: var(--rs-component-checkbox-hover-background-color);
+                border: var(--rs-component-checkbox-border-width-default) solid var(--rs-component-checkbox-hover-border-color);
+                svg {
+                    color: var(--rs-component-checkbox-hover-on-selected);
+                }
+            }
+            &:active{
+                background-color: var(--rs-component-checkbox-pressed-background-color);
+                border: var(--rs-component-checkbox-border-width-none) solid var(--rs-component-checkbox-pressed-border-color);
+                svg {
+                    color: var(--rs-component-checkbox-pressed-on-selected);
+                }
+            }
+            &.accent--text{
+                background-color: var(--rs-component-checkbox-indeterminate-selected-color);
+                border: var(--rs-component-checkbox-border-width-none) !important;
+                svg {
+                    color: var(--rs-component-checkbox-indeterminate-on-selected);
+                    height: auto;
+                    width: 8px;
+                }
+            }
+        }
+        // Selected states
+        &--selected{
+            .v-treeview-node__checkbox{
+                background-color: var(--rs-component-checkbox-default-selected-color);
+                border: var(--rs-component-checkbox-border-width-none) !important;
+                svg {
+                    color: var(--rs-component-checkbox-default-on-selected);
+                }
+                &:focus-visible{
+                    background-color: var(--rs-component-checkbox-focus-selected-color);
+                }
+                &:hover{
+                    background-color: var(--rs-component-checkbox-hover-selected-color);
+                }
+                &:active{
+                    background-color: var(--rs-component-checkbox-pressed-selected-color);
+                }
+            }
+        }
+    }
+}
+
+.treeview-input{
+    background: var(--rs-component-text-field-default-background-color) !important;
+    box-shadow: var(--rs-component-text-field-shadow-default-x)  var(--rs-component-text-field-shadow-default-y) var(--rs-component-text-field-shadow-default-blur) var(--rs-component-text-field-shadow-default-spread) var(--rs-component-text-field-shadow-default-color) !important;
+    border-radius: var(--rs-semantic-border-radius-default) !important;
+    .v-input{
+        margin-bottom: 0 !important;
+        &__slot {
+            border-radius: var(--rs-component-text-field-border-radius-default) var(--rs-component-text-field-border-radius-default) 0px 0px !important;
+            box-shadow: none !important;
+        }
+        &--is-focused{
+            .v-input__slot{
+                border-radius: var(--rs-component-text-field-border-radius-default) !important;
+            }
+        }
+    }
+}

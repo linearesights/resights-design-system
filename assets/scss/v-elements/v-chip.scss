@@ -1,0 +1,81 @@
+.v-chip {
+    &::before {
+        opacity: 0 !important;
+    }
+    
+    // Variants
+    &.primary{
+        transition: .2s;
+        background-color: var(--rs-component-chip-primary-default-background-color) !important;
+        color: var(--rs-component-chip-primary-default-text-color) !important;
+        border: var(--rs-component-chip-border-width-default) solid var(--rs-component-chip-outline-default-border-color) !important;
+
+        // States
+        &:hover {
+            background-color: var(--rs-component-chip-primary-hover-background-color) !important;
+            color: var(--rs-component-chip-primary-hover-text-color) !important;
+        }
+        &:active {
+            background-color: var(--rs-component-chip-primary-pressed-background-color) !important;
+            color: var(--rs-component-chip-primary-pressed-text-color) !important;
+        }
+        &:focus-visible {
+            background-color: var(--rs-component-chip-primary-focus-background-color) !important;
+            color: var(--rs-component-chip-primary-focus-text-color) !important;
+            @extend .focus-ring;
+        }
+        &.v-chip--disabled {
+            background-color: var(--rs-component-chip-primary-disabled-background-color) !important;
+            color: var(--rs-component-chip-primary-disabled-text-color) !important;
+        }
+    }
+
+    &.outline{
+        transition: .2s;
+        background-color: var(--rs-component-chip-outline-default-background-color) !important;
+        color: var(--rs-component-chip-outline-default-text-color) !important;
+        border: var(--rs-component-chip-border-width-outline) solid var(--rs-component-chip-outline-default-border-color) !important;
+
+        // States
+        &:hover {
+            background-color: var(--rs-component-chip-outline-hover-background-color) !important;
+            color: var(--rs-component-chip-outline-hover-text-color) !important;
+            border-color: var(--rs-component-chip-outline-hover-border-color) !important;
+        }
+        &:active {
+            background-color: var(--rs-component-chip-outline-pressed-background-color) !important;
+            color: var(--rs-component-chip-outline-pressed-text-color) !important;
+            border-color: var(--rs-component-chip-outline-pressed-border-color) !important;
+        }
+        &:focus-visible {
+            background-color: var(--rs-component-chip-outline-focus-background-color) !important;
+            color: var(--rs-component-chip-outline-focus-text-color) !important;
+            border-color: var(--rs-component-chip-outline-focus-border-color) !important;
+            @extend .focus-ring;
+        }
+        &.v-chip--disabled {
+            background-color: var(--rs-component-chip-outline-disabled-background-color) !important;
+            color: var(--rs-component-chip-outline-disabled-text-color) !important;
+            border-color: var(--rs-component-chip-outline-disabled-border-color) !important;
+        }
+    }
+
+
+    // Sizes
+    &.v-size--small{
+        font-weight: var(--rs-component-chip-sm-label-font-weight) !important;
+        font-size: var(--rs-component-chip-sm-label-font-size) !important;
+        line-height: var(--rs-component-chip-sm-label-line-height) !important;
+        letter-spacing: var(--rs-component-chip-sm-label-letter-spacing) !important;
+        padding: var(--rs-component-chip-sm-default-padding-y) var(--rs-component-chip-sm-default-padding-x) !important;
+        border-radius: var(--rs-component-chip-border-radius-sm) !important;
+    }
+    &.v-size--medium, &.v-size--default{
+        font-weight: var(--rs-component-chip-md-label-font-weight) !important;
+        font-size: var(--rs-component-chip-md-label-font-size) !important;
+        line-height: var(--rs-component-chip-md-label-line-height) !important;
+        letter-spacing: var(--rs-component-chip-md-label-letter-spacing) !important;
+        padding: var(--rs-component-chip-md-default-padding-y) var(--rs-component-chip-md-default-padding-x) !important;
+        border-radius: var(--rs-component-chip-border-radius-default) !important;
+    }
+}

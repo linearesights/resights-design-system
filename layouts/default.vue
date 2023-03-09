@@ -1,45 +1,24 @@
 <template>
   <v-app id="resights" :class="theme">
     <v-layout>
-      <!-- <v-app-bar title="Resights" /> -->
       <v-navigation-drawer permanent>
         <v-list nav>
-          <v-list-item link to="/">
+          <v-list-item v-for="page in pages" :key="page.link" link :to="'/' + page.link">
           <v-list-item-content>
-              <v-list-item-title>Home</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-          <v-list-item link to="/typography">
-          <v-list-item-content>
-              <v-list-item-title>Typography</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-          <v-list-item link to="/buttons">
-          <v-list-item-content>
-              <v-list-item-title>Buttons</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-          <v-list-item link to="/input-fields">
-          <v-list-item-content>
-              <v-list-item-title>Input fields</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-          <v-list-item link to="/settings-page">
-            <v-list-item-content>
-              <v-list-item-title>Settings page</v-list-item-title>
+              <v-list-item-title>{{page.text}}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </v-list>
         <v-list-item class="theme-switcher">
           <v-switch hide-details="auto" @click="swap()"></v-switch>
-          <label>Toggle theme</label>
+          Toggle theme
         </v-list-item>
       </v-navigation-drawer>
 
       <v-main id="app-container" class="background">
         <v-container
           fluid
-          style="width: calc(100vw - 256px); overflow-y: scroll"
+          style="width: calc(100vw - 256px); height: 100vh; overflow-y: scroll"
           class="pa-2 mr-0"
         >
           <router-view />
@@ -53,7 +32,15 @@
   export default {
     data() {
       return {
-        theme: "light"
+        theme: "light",
+        pages: [
+          {link: '', text: "Home"},
+          {link: 'typography', text: "Typography"},
+          {link: 'buttons', text: "Buttons"},
+          {link: 'input-fields', text: "Input fields"},
+          {link: 'settings-page', text: "Settings page"},
+          {link: 'chips', text: "Chips"},
+        ]
       };
     },
     methods: {
@@ -95,11 +82,12 @@ body {
 
 .theme-switcher {
   .v-input {
+    margin-right: .3rem;
     &__slot{
       border-radius: 20px;
       border: none !important;
       box-shadow: none !important;
-      padding: 5px;
+      padding: 3px;
     }
     &__control{
       flex-grow: 0;

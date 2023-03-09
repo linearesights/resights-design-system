@@ -1,19 +1,50 @@
 .v-menu__content {
     margin-top: 2px;
-    box-shadow: var--(rs-semantic-shadow-lg-0-x) var--(rs-semantic-shadow-lg-0-y) var--(rs-semantic-shadow-lg-0-blur) var--(rs-semantic-shadow-lg-0-spread) var--(rs-semantic-shadow-lg-0-color), var--(rs-semantic-shadow-lg-1-x) var--(rs-semantic-shadow-lg-1-y) var--(rs-semantic-shadow-lg-1-blur) var--(rs-semantic-shadow-lg-1-spread) var--(rs-semantic-shadow-lg-1-color) !important;
-    border: var--(rs-semantic-border-width-default) solid var--(rs-semantic-color-border-subdued) !important;
-    border-radius: var--(rs-semantic-border-radius-default) !important;
+    box-shadow: var(--rs-semantic-shadow-lg-0-x) var(--rs-semantic-shadow-lg-0-y) var(--rs-semantic-shadow-lg-0-blur) var(--rs-semantic-shadow-lg-0-spread) var(--rs-semantic-shadow-lg-0-color), var(--rs-semantic-shadow-lg-1-x) var(--rs-semantic-shadow-lg-1-y) var(--rs-semantic-shadow-lg-1-blur) var(--rs-semantic-shadow-lg-1-spread) var(--rs-semantic-shadow-lg-1-color) !important;
+    border: var(--rs-semantic-border-width-default) solid var(--rs-semantic-color-border-subdued) !important;
+    border-radius: var(--rs-semantic-border-radius-default) !important;
 
+    .v-list {
+        border-radius: var(--rs-semantic-border-radius-default) !important;
+        box-shadow: none !important;
+    }
     .v-list-item{
+        height: 36px !important;
+        min-height: 36px !important;
+        padding: 0 !important;
         &__content{
-            color: var--(rs-semantic-color-text-default);
-            font-weight: var--(rs-semantic-text-md-regular-font-weight) !important;
-            line-height: var--(rs-semantic-text-md-regular-line-height) !important;
-            font-size: var--(rs-semantic-text-md-regular-font-size) !important;
-            letter-spacing: var--(rs-semantic-text-md-regular-letter-spacing) !important;    
+            transition: .2s;
+            padding: 0 !important;
+            margin: 0 var(--rs-semantic-space-around-comp-sm);
+            color: var(--rs-semantic-color-text-default);
+            font-weight: var(--rs-semantic-text-md-regular-font-weight) !important;
+            line-height: var(--rs-semantic-text-md-regular-line-height) !important;
+            font-size: var(--rs-semantic-text-md-regular-font-size) !important;
+            letter-spacing: var(--rs-semantic-text-md-regular-letter-spacing) !important;    
+        }
+        &__title{
+            padding: var(--rs-semantic-space-around-comp-sm);
+            font-size: var(--rs-semantic-text-md-regular-font-size) !important;
+            line-height: var(--rs-semantic-text-md-regular-line-height) !important;
+            letter-spacing: var(--rs-semantic-text-md-regular-letter-spacing) !important;
+            font-weight: var(--rs-semantic-text-md-regular-font-weight) !important;
+            color: var(--rs-semantic-color-text-default) !important;
+        }
+        &::before{
+            opacity: 0 !important;
+        }
+
+        // States
+        &:hover{
+            .v-list-item__content {
+                transition: .2s;
+                background-color: var(--rs-semantic-color-surface-hovered) !important;
+            }
         }
         &--active{
-            background: var--(rs-semantic-color-surface-active);
+            .v-list-item__content{
+                background-color: var(--rs-semantic-color-surface-active) !important;
+            }
         }
     }
 }

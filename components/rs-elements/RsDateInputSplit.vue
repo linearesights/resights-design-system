@@ -3,21 +3,30 @@
         <label :class="[labelIsEmphasized ? 'is-emphasized' : '', 'small']">
             <slot>Label</slot>
         </label>
-        <v-select
-        solo
-        :items="items"
-        hide-details="auto"
-        :menu-props="{ bottom: true, offsetY: true }"
-        append-icon="$selectInputArrow"
-        clear-icon="$clearIcon"
-        :class="size"
-        :disabled="disabled"
-        :placeholder="placeholder"
-        :value="value"
-        attach
-        clearable
-        >
-    </v-select>
+        <div class="split-field">
+            <v-text-field
+            solo
+            hide-details="auto"
+            :placeholder="placeholder"
+            :class="size"
+            :disabled="disabled"
+            required
+            :rules="rules"
+            :value="value"
+            class="left-field"
+            ></v-text-field>
+            <v-text-field
+            solo
+            hide-details="auto"
+            :placeholder="placeholder"
+            :class="size"
+            :disabled="disabled"
+            required
+            :rules="rules"
+            :value="value"
+            class="right-field"
+            ></v-text-field>
+        </div>
     </div>
 </template>
   
@@ -44,15 +53,15 @@ export default {
             type: Boolean,
             default: false,
         },
-        items: {
+        rules: {
             type: Array,
-            default: [],
+            default: () => ([])
         },
         labelIsEmphasized: {
             type: Boolean,
             default: true,
-        },
-    }
+        }
+    },
 };
   
 </script>

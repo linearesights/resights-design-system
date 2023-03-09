@@ -3,13 +3,13 @@
         <label :class="[labelIsEmphasized ? 'is-emphasized' : '', 'small']">
             <slot>Label</slot>
         </label>
-        <v-select
+        <v-autocomplete
         solo
+        append-icon="$selectInputArrow"
+        clear-icon="$clearIcon"
         :items="items"
         hide-details="auto"
         :menu-props="{ bottom: true, offsetY: true }"
-        append-icon="$selectInputArrow"
-        clear-icon="$clearIcon"
         :class="size"
         :disabled="disabled"
         :placeholder="placeholder"
@@ -17,7 +17,7 @@
         attach
         clearable
         >
-    </v-select>
+    </v-autocomplete>
     </div>
 </template>
   

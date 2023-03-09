@@ -1,4 +1,3 @@
-
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -22,13 +21,23 @@ export default {
   css: [
     '~/assets/scss/main.scss'
   ],
+  
+  build: {
+    parallel: true,
+    cache: true,
+    hardSource: false,
+    analyze: false,
+    babel: {
+      compact: true,
+    },
+  },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
   ],
 
-  // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  // // Auto import components: https://go.nuxtjs.dev/config-components
+  components: false,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -39,7 +48,7 @@ export default {
   ],
 
   styleResources: {
-    scss: ['/resights-design-tokens/build/scss/*.scss']
+    // scss: ['/resights-design-tokens/build/scss/*.scss']
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules

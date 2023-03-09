@@ -11,12 +11,30 @@
     // Sizing
     &.v-size--small{
         padding: var(--rs-component-button-sm-default-padding-y) var(--rs-component-button-sm-default-padding-x) !important;
+        font-size: var(--rs-component-button-sm-label-font-weight) !important;
+        line-height: var(--rs-component-button-sm-label-line-height) !important;
+        font-size: var(--rs-component-button-sm-label-font-size) !important;
+        letter-spacing: var(--rs-component-button-sm-label-letter-spacing) !important;
+        text-decoration: var(--rs-component-button-sm-label-text-decoration) !important;
+        text-transform: var(--rs-component-button-sm-label-text-case) !important;
     }
-    &v-size--medium{
+    &.v-size--medium{
         padding: var(--rs-component-button-md-default-padding-y) var(--rs-component-button-md-default-padding-x) !important;
+        font-size: var(--rs-component-button-md-label-font-weight) !important;
+        line-height: var(--rs-component-button-md-label-line-height) !important;
+        font-size: var(--rs-component-button-md-label-font-size) !important;
+        letter-spacing: var(--rs-component-button-md-label-letter-spacing) !important;
+        text-decoration: var(--rs-component-button-md-label-text-decoration) !important;
+        text-transform: var(--rs-component-button-md-label-text-case) !important;
     }
     &.v-size--large{
         padding: var(--rs-component-button-lg-default-padding-y) var(--rs-component-button-lg-default-padding-x) !important;
+        font-size: var(--rs-component-button-lg-label-font-weight) !important;
+        line-height: var(--rs-component-button-lg-label-line-height) !important;
+        font-size: var(--rs-component-button-lg-label-font-size) !important;
+        letter-spacing: var(--rs-component-button-lg-label-letter-spacing) !important;
+        text-decoration: var(--rs-component-button-lg-label-text-decoration) !important;
+        text-transform: var(--rs-component-button-lg-label-text-case) !important;
     }
 
     // Variants
