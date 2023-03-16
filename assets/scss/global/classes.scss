@@ -2,3 +2,12 @@
     box-shadow: var(--rs-semantic-focus-ring-0-x) var(--rs-semantic-focus-ring-0-y) var(--rs-semantic-focus-ring-0-blur) var(--rs-semantic-focus-ring-0-spread) var(--rs-semantic-focus-ring-0-color), var(--rs-semantic-focus-ring-1-x) var(--rs-semantic-focus-ring-1-y) var(--rs-semantic-focus-ring-1-blur) var(--rs-semantic-focus-ring-1-spread) var(--rs-semantic-focus-ring-1-color) !important;
     z-index: 10;
 }
+.w-100 {
+    width: 100%;
+}
+.h-100{
+    height: 100%;
+}
+.cursor-pointer {
+    cursor: pointer;
+}

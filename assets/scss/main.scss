@@ -1,9 +1,24 @@
-@import '~/assets/design-tokens/design-tokens';
-@import './classes';
+// Design-tokens
+@import '~/assets/design-tokens/design-tokens-dark';
+@import '~/assets/design-tokens/design-tokens-default';
+
+// Base
+@import './base/typography';
+
+// Global
+@import './global/classes';
+
+// V-elements
 @import './v-elements/v-btn';
-@import './v-elements/inputFields';
+@import './v-elements/input-fields';
 @import './v-elements/v-select';
 @import './v-elements/v-menu';
 @import './v-elements/v-card';
 @import './v-elements/v-chip';
 @import './v-elements/v-treeview';
+@import './v-elements/v-main';
+@import './v-elements/v-picker';
+@import './v-elements/v-tabs';
+@import './v-elements/v-icon';
+@import './v-elements/grid-system';
+@import './v-elements/v-navigation-drawer';

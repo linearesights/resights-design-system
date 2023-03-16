@@ -2,6 +2,7 @@
     border: var(--rs-component-text-field-border-width-default) solid var(--rs-component-text-field-default-border-color);
     border-top: 0px;
     border-radius: 0px 0px var(--rs-component-text-field-border-radius-default) var(--rs-component-text-field-border-radius-default) !important;
+    margin-bottom: 1.1rem;
     .v-treeview-node {
         &__toggle {
             width: var(--rs-semantic-size-comp-sm) !important;
@@ -16,9 +17,13 @@
             line-height: var(--rs-component-label-md-regular-line-height) !important;
             letter-spacing: var(--rs-component-label-md-regular-letter-spacing) !important;
             text-transform: var(--rs-component-label-md-regular-text-case) !important;
+            color: var(--rs-semantic-color-text-default) !important;
         }
         &__root{
             min-height: var(--rs-component-text-field-md-height) !important;
+        }
+        &__level {
+            width: 22.5px;
         }
         &__content{
             margin-left: var(--rs-semantic-space-between-comp-md) !important;
@@ -39,7 +44,7 @@
                 opacity: 0 !important;
             }            
 
-            // states
+            // States
             &:focus-visible{
                 background-color: var(--rs-component-checkbox-focus-background-color);
                 border: var(--rs-component-checkbox-border-width-default) solid var(--rs-component-checkbox-focus-border-color);
@@ -72,6 +77,7 @@
                 }
             }
         }
+
         // Selected states
         &--selected{
             .v-treeview-node__checkbox{
@@ -106,6 +112,7 @@
         }
         &--is-focused{
             .v-input__slot{
+                @extend .focus-ring;
                 border-radius: var(--rs-component-text-field-border-radius-default) !important;
             }
         }

@@ -1,4 +1,10 @@
 .v-select {
+    &__selection {
+        color: var(--rs-component-text-field-default-text-color) !important;
+    }
+    input {
+        cursor: pointer;
+    }
     .v-input__append-inner {
         padding-left: 0 !important;
     }

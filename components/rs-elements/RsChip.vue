@@ -4,7 +4,9 @@
     :class="variant"
     :small="size==='small'"
     :medium="size==='medium'"
-    :disabled="disabled">
+    :disabled="disabled"
+    :close="close"
+    close-icon="$closeIcon">
     <slot>Text</slot>
     </v-chip>
 </template>
@@ -29,6 +31,10 @@
         },
       },
       disabled: {
+        type: Boolean,
+        default: false,
+      },
+      close: {
         type: Boolean,
         default: false,
       },

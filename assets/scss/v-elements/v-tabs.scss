@@ -1,0 +1,98 @@
+.v-tabs {
+    border-bottom: var(--rs-component-tab-item-border-bottom-width) var(--rs-component-tab-item-border-bottom-style) var(--rs-component-tab-item-border-bottom-color);
+    flex: 0 !important;
+    background-color: var(--rs-component-text-field-default-background-color);
+    
+    &.menu-active{
+        .v-tabs-slider {
+            opacity: 0 !important;
+            transition: .2;
+        }
+        .v-tab:after {
+            opacity: 0 !important;
+        }
+        .v-tab-more:after {
+            background: var(--rs-component-tab-item-selected-indicator-color);
+            opacity: 1 !important;
+        }
+        .v-icon {
+            color: var(--rs-component-tab-item-selected-icon-color) !important;
+        }
+    }
+    .v-tab {
+        text-transform: capitalize;
+        margin: 0 var(--rs-component-tab-item-space-around);
+        color: var(--rs-component-tab-item-default-text-color) !important;
+        position: relative;
+        min-width: 0 !important;
+        transition: .2s;
+
+        &::before {
+            opacity: 0 !important;
+        }
+        &:after {
+            transition: .2s;
+            content:'';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--rs-component-tab-item-default-indicator-color);
+            height: var(--rs-component-tab-item-indicator-height);
+            border-radius: var(--rs-component-tab-item-border-radius-indicator-top) var(--rs-component-tab-item-border-radius-indicator-top) var(--rs-component-tab-item-border-radius-indicator-bottom) var(--rs-component-tab-item-border-radius-indicator-bottom);
+            opacity: 1;
+          }
+
+        // States
+        &:hover {
+            color: var(--rs-component-tab-item-hovered-text-color) !important;
+            &.v-tab:after {
+                background: var(--rs-component-tab-item-hovered-indicator-color);
+                opacity: 1;
+            }
+            .v-icon {
+                color: var(--rs-component-tab-item-hovered-icon-color) !important;
+            }
+        }
+        &:active{
+            color: var(--rs-component-tab-item-pressed-text-color) !important;
+            &.v-tab:after {
+                background: var(--rs-component-tab-item-pressed-indicator-color);
+                opacity: 1;
+            }
+            .v-icon {
+                color: var(--rs-component-tab-item-pressed-icon-color) !important;
+            }
+        }
+        &--active{
+            color: var(--rs-component-tab-item-selected-text-color) !important;
+            &.v-tab:after {
+                background: var(--rs-component-tab-item-pressed-indicator-color);
+                opacity: 1;
+            }
+        }
+    }
+    .v-icon {
+        width: var(--rs-component-tab-item-icon-size);
+        height: var(--rs-component-tab-item-icon-size);
+        color: var(--rs-component-tab-item-default-icon-color) !important;
+    }
+
+    &-slider-wrapper{
+        height: var(--rs-component-tab-item-indicator-height) !important;
+        transition: none !important;
+    }
+    &-slider{
+        transition: .2s;
+        background-color: var(--rs-component-tab-item-selected-indicator-color) !important;
+        border-radius: var(--rs-component-tab-item-border-radius-indicator-top) var(--rs-component-tab-item-border-radius-indicator-top) var(--rs-component-tab-item-border-radius-indicator-bottom) var(--rs-component-tab-item-border-radius-indicator-bottom);
+        height: unset !important;
+    }
+    &-items {
+        background-color: transparent !important;
+    }
+}
+
+.v-slide-group__prev {
+    display: none !important;
+}

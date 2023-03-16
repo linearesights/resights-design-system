@@ -1,6 +1,6 @@
 <template>
     <div>
-        <label :class="[labelIsEmphasized ? 'is-emphasized' : '', 'small']">
+        <label :for="inputId" :class="[labelIsEmphasized ? 'is-emphasized' : '', 'small']">
             <slot>Label</slot>
         </label>
         <div class="split-field">
@@ -16,6 +16,7 @@
             :value="value"
             attach
             class="left-field"
+            :id="inputId"
             >
             </v-combobox>
             <v-combobox
@@ -61,16 +62,24 @@ export default {
         },
         itemsLeft: {
             type: Array,
-            default: [],
+            default: () => ([]),
         },
         itemsRight: {
             type: Array,
-            default: [],
+            default: () => ([]),
         },
         labelIsEmphasized: {
             type: Boolean,
             default: true,
         },
+    },
+    data(){
+        return {
+            inputId: null,
+        }
+    },
+    mounted () {
+        this.inputId = this._uid
     }
 };
   

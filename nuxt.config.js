@@ -61,9 +61,5 @@ export default {
     customVariables: ['~/assets/scss/vuetify/variables.scss'],
     treeShake: true,
     optionsPath: './vuetify.options.js',
-    button: {
-      disableRipple: true,
-    },
   },
-
 }

@@ -1,6 +1,7 @@
 
 .v-btn {
     transition: .2s !important;
+    min-width: 0 !important;
     &:hover, &:focus{
         transition: .2s !important;
     }
@@ -17,8 +18,15 @@
         letter-spacing: var(--rs-component-button-sm-label-letter-spacing) !important;
         text-decoration: var(--rs-component-button-sm-label-text-decoration) !important;
         text-transform: var(--rs-component-button-sm-label-text-case) !important;
+        .v-icon {
+            height: var(--rs-button-size-icon-sm) !important;
+            width: var(--rs-button-size-icon-sm) !important;
+        }
+        .v-btn__content{
+            gap: var(--rs-component-button-sm-space-between);
+        }
     }
-    &.v-size--medium{
+    &.v-size--medium, &.v-size--default{
         padding: var(--rs-component-button-md-default-padding-y) var(--rs-component-button-md-default-padding-x) !important;
         font-size: var(--rs-component-button-md-label-font-weight) !important;
         line-height: var(--rs-component-button-md-label-line-height) !important;
@@ -26,6 +34,13 @@
         letter-spacing: var(--rs-component-button-md-label-letter-spacing) !important;
         text-decoration: var(--rs-component-button-md-label-text-decoration) !important;
         text-transform: var(--rs-component-button-md-label-text-case) !important;
+        .v-icon {
+            height: var(--rs-button-size-icon-md) !important;
+            width: var(--rs-button-size-icon-md) !important;
+        }
+        .v-btn__content{
+            gap: var(--rs-component-button-md-space-between);
+        }
     }
     &.v-size--large{
         padding: var(--rs-component-button-lg-default-padding-y) var(--rs-component-button-lg-default-padding-x) !important;
@@ -35,28 +50,51 @@
         letter-spacing: var(--rs-component-button-lg-label-letter-spacing) !important;
         text-decoration: var(--rs-component-button-lg-label-text-decoration) !important;
         text-transform: var(--rs-component-button-lg-label-text-case) !important;
+        .v-icon {
+            height: var(--rs-button-size-icon-lg) !important;
+            width: var(--rs-button-size-icon-lg) !important;
+        }
+        .v-btn__content{
+            gap: var(--rs-component-button-lg-space-between);
+        }
     }
 
     // Variants
     &.primary {
         background-color: var(--rs-component-button-primary-default-background-color) !important;
         color: var(--rs-component-button-primary-default-text-color) !important;
+        .v-icon {
+            color: var(--rs-component-button-primary-default-icon-color) !important;
+        }
+        
         &:hover {
             background-color: var(--rs-component-button-primary-hover-background-color) !important;
             color: var(--rs-component-button-primary-hover-text-color) !important;
+            .v-icon {
+                color: var(--rs-component-button-primary-hover-icon-color) !important;
+            }
         }
         &:active {
             background-color: var(--rs-component-button-primary-pressed-background-color) !important;
             color: var(--rs-component-button-primary-pressed-text-color) !important;
+            .v-icon {
+                color: var(--rs-component-button-primary-pressed-icon-color) !important;
+            }
         }
         &:focus-visible {
             background-color: var(--rs-component-button-primary-focus-background-color) !important;
             color: var(--rs-component-button-primary-focus-text-color) !important;
-            @extend .focus-ring
+            @extend .focus-ring;
+            .v-icon {
+                color: var(--rs-component-button-primary-focus-icon-color) !important;
+            }
         }
         &.v-btn--disabled{
             background-color: var(--rs-component-button-primary-disabled-background-color) !important;
             color: var(--rs-component-button-primary-disabled-text-color) !important;
+            .v-icon {
+                color: var(--rs-component-button-primary-disabled-icon-color) !important;
+            }
         }
     }
     &.secondary {
@@ -122,9 +160,8 @@
             color: var(--rs-component-button-ghost-disabled-text-color) !important;
         }
     }
+    // Btn w. dropdown
+    .arrow-icon.menuActive {
+        transform: rotate(180deg);
+    }
 }
-
-// Disable ripple effect
-.v-ripple__container {
-    opacity: 0 !important;
- }

@@ -2,6 +2,14 @@
     &::before {
         opacity: 0 !important;
     }
+
+    &__close{
+        width: var(--rs-semantic-size-comp-xs) !important;
+        height: var(--rs-semantic-size-comp-xs) !important;
+    }
+    &__close::after{
+        opacity: 0 !important;
+    }
     
     // Variants
     &.primary{

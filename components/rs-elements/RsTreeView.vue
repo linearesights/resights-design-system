@@ -1,6 +1,6 @@
 <template>
     <div>
-        <label :class="[labelIsEmphasized ? 'is-emphasized' : '', 'small']">
+        <label :for="inputId" :class="[labelIsEmphasized ? 'is-emphasized' : '', 'small']">
             <slot>Label</slot>
         </label>
         <div class="treeview-input">
@@ -17,6 +17,7 @@
             clearable
             clear-icon="$clearIcon"
             prepend-inner-icon="$searchIcon"
+            :id="inputId"
             ></v-text-field>
             <v-treeview
             selectable
@@ -72,9 +73,10 @@ export default {
     },
     data() {
         return {
-            open: [1, 2],
+            open: [],
             search: null,
             caseSensitive: false,
+            inputId: null,
         }
     },
     computed: {
@@ -84,6 +86,9 @@ export default {
           : undefined
       },
     },
+    mounted () {
+        this.inputId = this._uid
+    }
 };
   
 </script>

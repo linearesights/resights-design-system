@@ -1,5 +1,8 @@
 <template>
     <v-form class="ma-6">
+        <RsTextInput placeholder="Placeholder">
+            Text field - Medium
+        </RsTextInput>
         <RsTextInput size="small" placeholder="Placeholder">
             Text field - small
         </RsTextInput>
@@ -17,8 +20,9 @@
         </RsTextInputSplit>
         <RsSelectInput :items="items">Select</RsSelectInput>
         <RsAutoComplete :items="items">Autocomplete</RsAutoComplete>
+        <RsDateInputSplit>Date input Split</RsDateInputSplit>
         <RsComboInputSplit :itemsLeft="items" :itemsRight="items">Combobox - Split</RsComboInputSplit>
-        <RsTreeView :items="treeViewItems">TreeView</RsTreeView>
+        <RsTreeView placeholder="Placeholder" :items="treeViewItems">TreeView</RsTreeView>
     </v-form>
 </template>
 
@@ -29,6 +33,7 @@ import RsSelectInput from '@/components/rs-elements/RsSelectInput'
 import RsAutoComplete from '@/components/rs-elements/RsAutoComplete'
 import RsComboInputSplit from '@/components/rs-elements/RsComboInputSplit'
 import RsTreeView from '@/components/rs-elements/RsTreeView'
+import RsDateInputSplit from '@/components/rs-elements/RsDateInputSplit'
 
 export default {
     components: {
@@ -37,7 +42,8 @@ export default {
         RsAutoComplete,
         RsTextInputSplit,
         RsComboInputSplit,
-        RsTreeView
+        RsTreeView,
+        RsDateInputSplit
     },
     data () {
         return {
@@ -50,7 +56,8 @@ export default {
                     { id: 3, name: 'b' },
                     { id: 4, name: 'c' },
                 ],
-            }]
+            }],
+            picker: '',
         }
     }
   }
@@ -59,7 +66,7 @@ export default {
 <style scoped>
     .v-form {
         max-width: 500px;
-        background-color: white;
+        background-color: var(--rs-semantic-color-surface-default);
         padding: 3rem;
         margin-bottom: 10rem !important;
     }

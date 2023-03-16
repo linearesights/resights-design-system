@@ -1,10 +1,15 @@
 <template>
   <v-btn
+    depressed
+    prepend-icon="mdi-cloud-upload"
     :class="variant"
     :small="size==='small'"
     :medium="size==='medium'"
     :large="size==='large'"
-    depressed>
+    :disabled="disabled"
+    :ripple=false
+    >
+    <v-icon v-if="icon">{{ icon }}</v-icon>
     <slot>Button</slot>
   </v-btn>
 </template>
@@ -27,7 +32,15 @@ export default {
       const sizes = ["small", "medium", "large"] // Sizes
       return sizes.includes(value)
       },
-    }
+    },
+    disabled: {
+        type: Boolean,
+        default: false,
+      },
+    icon: {
+        type: String,
+        default: '',
+      },
   },
 };
 

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <label :class="[labelIsEmphasized ? 'is-emphasized' : '', 'small']">
+        <label :for="inputId" :class="[labelIsEmphasized ? 'is-emphasized' : '', 'small']">
             <slot>Label</slot>
         </label>
         <v-select
@@ -16,6 +16,7 @@
         :value="value"
         attach
         clearable
+        :id="inputId"
         >
     </v-select>
     </div>
@@ -46,12 +47,20 @@ export default {
         },
         items: {
             type: Array,
-            default: [],
+            default: () => ([]),
         },
         labelIsEmphasized: {
             type: Boolean,
             default: true,
         },
+    },
+    data(){
+        return {
+            inputId: null,
+        }
+    },
+    mounted () {
+        this.inputId = this._uid
     }
 };
   

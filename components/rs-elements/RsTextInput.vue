@@ -1,6 +1,6 @@
 <template>
     <div>
-        <label :class="[labelIsEmphasized ? 'is-emphasized' : '', 'small']">
+        <label :for="inputId" :class="[labelIsEmphasized ? 'is-emphasized' : '', 'small']">
             <slot>Label</slot>
         </label>
         <v-text-field
@@ -13,6 +13,7 @@
         :rules="rules"
         :value="value"
         :prepend-inner-icon="icon"
+        :id="inputId"
         ></v-text-field>
     </div>
 </template>
@@ -55,12 +56,16 @@ export default {
         icon: {
             type: String,
             default: '',
-        },
+        }
     },
+    data(){
+        return {
+            inputId: null,
+        }
+    },
+    mounted () {
+        this.inputId = this._uid
+    }
 };
   
 </script>
-
-<!-- NOTES:
-    Using v-model to get input value from parent component: https://stackoverflow.com/questions/47311936/v-model-and-child-components
--->

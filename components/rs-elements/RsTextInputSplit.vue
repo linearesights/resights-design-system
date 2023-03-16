@@ -1,24 +1,25 @@
 <template>
     <div>
-        <label :class="[labelIsEmphasized ? 'is-emphasized' : '', 'small']">
+        <label :for="inputId" :class="[labelIsEmphasized ? 'is-emphasized' : '', 'small']">
             <slot>Label</slot>
         </label>
         <div class="split-field">
             <v-text-field
             solo
             hide-details="auto"
-            :placeholder="placeholder"
+            :placeholder="placeholderLeft"
             :class="size"
             :disabled="disabled"
             required
             :rules="rules"
             :value="value"
             class="left-field"
+            :id="inputId"
             ></v-text-field>
             <v-text-field
             solo
             hide-details="auto"
-            :placeholder="placeholder"
+            :placeholder="placeholderRight"
             :class="size"
             :disabled="disabled"
             required
@@ -41,7 +42,11 @@ export default {
             return sizes.includes(value)
             },
         },
-        placeholder: {
+        placeholderLeft: {
+            type: String,
+            default: '',
+        },
+        placeholderRight: {
             type: String,
             default: '',
         },
@@ -62,6 +67,14 @@ export default {
             default: true,
         }
     },
+    data(){
+        return {
+            inputId: null,
+        }
+    },
+    mounted () {
+        this.inputId = this._uid
+    }
 };
   
 </script>

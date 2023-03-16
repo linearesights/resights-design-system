@@ -1,6 +1,6 @@
 <template>
     <div>
-        <label :class="[labelIsEmphasized ? 'is-emphasized' : '', 'small']">
+        <label v-if="!hideLabel" :for="inputId" :class="[labelIsEmphasized ? 'is-emphasized' : '', 'small']">
             <slot>Label</slot>
         </label>
         <v-autocomplete
@@ -16,6 +16,8 @@
         :value="value"
         attach
         clearable
+        :id="inputId"
+        :prepend-inner-icon="icon"
         >
     </v-autocomplete>
     </div>
@@ -44,14 +46,30 @@ export default {
             type: Boolean,
             default: false,
         },
+        hideLabel: {
+            type: Boolean,
+            default: false,
+        },
         items: {
             type: Array,
-            default: [],
+            default: () => ([])
         },
         labelIsEmphasized: {
             type: Boolean,
             default: true,
         },
+        icon: {
+            type: String,
+            default: '',
+        }
+    },
+    data(){
+        return {
+            inputId: null,
+        }
+    },
+    mounted () {
+        this.inputId = this._uid
     }
 };
   

@@ -44,9 +44,9 @@ label{
 }
 
 .v-input{
-    // Margin reference missing in data
+    // TODO - find solution for input field spacing – look into stacks
     margin-bottom: 1.1rem !important;
-    
+
     transition: .2s !important;
     &:hover, &:focus{
         transition: .2s !important;
@@ -79,7 +79,7 @@ label{
         min-width: unset !important;
         width: unset !important;
         height: unset !important;
-        svg {
+        svg, i {
             color: var(--rs-component-text-field-default-icon-color) !important;
         }
     }
@@ -96,7 +96,7 @@ label{
             background: var(--rs-component-text-field-hover-background-color) !important;
             border: var(--rs-component-text-field-border-width-default) solid var(--rs-component-text-field-hover-border-color);
         }
-        .v-input__icon--prepend-inner svg{
+        .v-input__icon--prepend-inner svg, .v-input__icon--prepend-inner i {
             color: var(--rs-component-text-field-hover-icon-color) !important;
         }
     }
@@ -113,7 +113,7 @@ label{
             background: var(--rs-component-text-field-focus-background-color) !important;
             border: var(--rs-component-text-field-border-width-default) solid var(--rs-component-text-field-focus-border-color);
         }
-        .v-input__icon--prepend-inner svg{
+        .v-input__icon--prepend-inner svg, .v-input__icon--prepend-inner i{
             color: var(--rs-component-text-field-focus-icon-color) !important;
         }
     }
@@ -130,7 +130,7 @@ label{
                 color: var(--rs-component-text-field-disabled-placeholder-color) !important;
             }
         }
-        .v-input__icon--prepend-inner svg{
+        .v-input__icon--prepend-inner svg, .v-input__icon--prepend-inner i {
             color: var(--rs-component-text-field-disabled-icon-color) !important;
         }
     }
@@ -146,7 +146,7 @@ label{
             background: var(--rs-component-text-field-error-background-color) !important;
             border: var(--rs-component-text-field-border-width-default) solid var(--rs-component-text-field-error-border-color);
         }
-        .v-input__icon--prepend-inner svg {
+        .v-input__icon--prepend-inner svg, .v-input__icon--prepend-inner i {
             color: var(--rs-component-text-field-error-icon-color) !important;
         }
     }
@@ -174,9 +174,14 @@ label{
             padding-right: var(--rs-component-text-field-md-padding-x) !important;
             gap: var(--rs-semantic-space-between-comp-md);
         }
-        .v-input__icon--prepend-inner svg{
-            height: var(--rs-semantic-size-comp-sm) !important;
-            width: var(--rs-semantic-size-comp-sm) !important;
+        .v-input__icon--prepend-inner {
+            i {
+                font-size: var(--rs-semantic-size-comp-sm) !important;
+            }
+            svg{
+                height: var(--rs-semantic-size-comp-sm) !important;
+                width: var(--rs-semantic-size-comp-sm) !important;
+            }
         }
     }
     &.small{
@@ -186,9 +191,14 @@ label{
             padding-right: var(--rs-component-text-field-sm-padding-x) !important;
             gap: var(--rs-semantic-space-between-comp-sm);
         }
-        .v-input__icon--prepend-inner svg{
-            height: var(--rs-semantic-size-comp-xs) !important;
-            width: var(--rs-semantic-size-comp-xs) !important;
+        .v-input__icon--prepend-inner {
+            i {
+                font-size: var(--rs-semantic-size-comp-xs) !important;
+            }
+            svg{
+                height: var(--rs-semantic-size-comp-xs) !important;
+                width: var(--rs-semantic-size-comp-xs) !important;
+            }
         }
     }
 }
@@ -208,4 +218,12 @@ label{
             z-index: 1;
         }
     }
+}
+
+// TODO - find solution for input field spacing – look into stacks
+.top-bar {
+    .v-input{
+        margin-bottom: 0 !important;
+    }
+    
 }

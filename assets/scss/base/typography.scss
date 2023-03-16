@@ -1,0 +1,108 @@
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+.rs-semantic-text-xs-regular {
+    font-weight: var(--rs-semantic-text-xs-regular-font-weight);
+    line-height: var(--rs-semantic-text-xs-regular-line-height);
+    font-size: var(--rs-semantic-text-xs-regular-font-size);
+    letter-spacing: var(--rs-semantic-text-xs-regular-letter-spacing);
+    color: var(--rs-semantic-color-text-default);
+}
+.rs-semantic-text-xs-medium {
+    font-weight: var(--rs-semantic-text-xs-medium-font-weight);
+    line-height: var(--rs-semantic-text-xs-medium-line-height);
+    font-size: var(--rs-semantic-text-xs-medium-font-size);
+    letter-spacing: var(--rs-semantic-text-xs-medium-letter-spacing);
+    color: var(--rs-semantic-color-text-default);
+}
+.rs-semantic-text-xs-semi-bold {
+    font-weight: var(--rs-semantic-text-xs-semi-bold-font-weight);
+    line-height: var(--rs-semantic-text-xs-semi-bold-line-height);
+    font-size: var(--rs-semantic-text-xs-semi-bold-font-size);
+    letter-spacing: var(--rs-semantic-text-xs-semi-bold-letter-spacing);
+    color: var(--rs-semantic-color-text-default);
+}
+.rs-semantic-text-sm-regular {
+    font-weight: var(--rs-semantic-text-sm-regular-font-weight);
+    line-height: var(--rs-semantic-text-sm-regular-line-height);
+    font-size: var(--rs-semantic-text-sm-regular-font-size);
+    letter-spacing: var(--rs-semantic-text-sm-regular-letter-spacing);
+    color: var(--rs-semantic-color-text-default);
+}
+.rs-semantic-text-sm-medium {
+    font-weight: var(--rs-semantic-text-sm-medium-font-weight);
+    line-height: var(--rs-semantic-text-sm-medium-line-height);
+    font-size: var(--rs-semantic-text-sm-medium-font-size);
+    letter-spacing: var(--rs-semantic-text-sm-medium-letter-spacing);
+    color: var(--rs-semantic-color-text-default);
+}
+.rs-semantic-text-sm-semi-bold {
+    font-weight: var(--rs-semantic-text-sm-semi-bold-font-weight);
+    line-height: var(--rs-semantic-text-sm-semi-bold-line-height);
+    font-size: var(--rs-semantic-text-sm-semi-bold-font-size);
+    letter-spacing: var(--rs-semantic-text-sm-semi-bold-letter-spacing);
+    color: var(--rs-semantic-color-text-default);
+}
+.rs-semantic-text-md-regular {
+    font-weight: var(--rs-semantic-text-md-regular-font-weight);
+    line-height: var(--rs-semantic-text-md-regular-line-height);
+    font-size: var(--rs-semantic-text-md-regular-font-size);
+    letter-spacing: var(--rs-semantic-text-md-regular-letter-spacing);
+    color: var(--rs-semantic-color-text-default);
+}
+.rs-semantic-text-md-medium {
+    font-weight: var(--rs-semantic-text-md-medium-font-weight);
+    line-height: var(--rs-semantic-text-md-medium-line-height);
+    font-size: var(--rs-semantic-text-md-medium-font-size);
+    letter-spacing: var(--rs-semantic-text-md-medium-letter-spacing);
+    color: var(--rs-semantic-color-text-default);
+}
+.rs-semantic-text-md-semi-bold {
+    font-weight: var(--rs-semantic-text-md-semi-bold-font-weight);
+    line-height: var(--rs-semantic-text-md-semi-bold-line-height);
+    font-size: var(--rs-semantic-text-md-semi-bold-font-size);
+    letter-spacing: var(--rs-semantic-text-md-semi-bold-letter-spacing);
+    color: var(--rs-semantic-color-text-default);
+}
+.rs-semantic-text-lg-regular {
+    font-weight: var(--rs-semantic-text-lg-regular-font-weight);
+    line-height: var(--rs-semantic-text-lg-regular-line-height);
+    font-size: var(--rs-semantic-text-lg-regular-font-size);
+    letter-spacing: var(--rs-semantic-text-lg-regular-letter-spacing);
+    color: var(--rs-semantic-color-text-default);
+}
+.rs-semantic-text-lg-medium {
+    font-weight: var(--rs-semantic-text-lg-medium-font-weight);
+    line-height: var(--rs-semantic-text-lg-medium-line-height);
+    font-size: var(--rs-semantic-text-lg-medium-font-size);
+    letter-spacing: var(--rs-semantic-text-lg-medium-letter-spacing);
+    color: var(--rs-semantic-color-text-default);
+}
+.rs-semantic-text-lg-semi-bold {
+    font-weight: var(--rs-semantic-text-lg-semi-bold-font-weight);
+    line-height: var(--rs-semantic-text-lg-semi-bold-line-height);
+    font-size: var(--rs-semantic-text-lg-semi-bold-font-size);
+    letter-spacing: var(--rs-semantic-text-lg-semi-bold-letter-spacing);
+    color: var(--rs-semantic-color-text-default);
+}
+.rs-semantic-text-xl-semi-bold {
+    font-weight: var(--rs-semantic-text-xl-semi-bold-font-weight);
+    line-height: var(--rs-semantic-text-xl-semi-bold-line-height);
+    font-size: var(--rs-semantic-text-xl-semi-bold-font-size);
+    letter-spacing: var(--rs-semantic-text-xl-semi-bold-letter-spacing);
+    color: var(--rs-semantic-color-text-default);
+}
+.rs-semantic-text-xxl-semi-bold {
+    font-weight: var(--rs-semantic-text-xxl-semi-bold-font-weight);
+    line-height: var(--rs-semantic-text-xxl-semi-bold-line-height);
+    font-size: var(--rs-semantic-text-xxl-semi-bold-font-size);
+    letter-spacing: var(--rs-semantic-text-xxl-semi-bold-letter-spacing);
+    color: var(--rs-semantic-color-text-default);
+}
+
+// Reset typography
+p {
+    margin: 0 !important;
+}
