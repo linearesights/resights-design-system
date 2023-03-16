@@ -6,13 +6,15 @@
             <v-divider></v-divider>
             <v-card-text>
                 <v-form ref="form_one">
-                    <RsTextInput :rules="rules" value="Aske">Fornavn</RsTextInput>
-                    <RsTextInput :rules="rules" value="Sørensen">Efternavn</RsTextInput>
-                    <RsTextInput :rules="rules" value="aske@resights.dk" disabled>Email</RsTextInput>
-                    <RsTextInput :rules="rules" value="+4540427829">Telefon</RsTextInput>
-                    <RsTextInput :rules="rules" value="RESIGHTS APS" disabled>Organisation</RsTextInput>
-                    <RsTextInput :rules="rules" value="41527080" disabled>CVR-nummer</RsTextInput>
-                    <RsSelectInput value="Dansk" :items="['Dansk', 'Engelsk']">Sprog</RsSelectInput>
+                    <Stack direction="vertical" spacing="md">
+                        <RsTextInput :rules="rules" value="Aske">Fornavn</RsTextInput>
+                        <RsTextInput :rules="rules" value="Sørensen">Efternavn</RsTextInput>
+                        <RsTextInput :rules="rules" value="aske@resights.dk" disabled>Email</RsTextInput>
+                        <RsTextInput :rules="rules" value="+4540427829">Telefon</RsTextInput>
+                        <RsTextInput :rules="rules" value="RESIGHTS APS" disabled>Organisation</RsTextInput>
+                        <RsTextInput :rules="rules" value="41527080" disabled>CVR-nummer</RsTextInput>
+                        <RsSelectInput value="Dansk" :items="['Dansk', 'Engelsk']">Sprog</RsSelectInput>
+                    </Stack>
                 </v-form>
             </v-card-text>
             <v-divider></v-divider>
@@ -28,9 +30,11 @@
             <v-divider></v-divider>
             <v-card-text>
                 <v-form ref="form_two">
-                    <RsTextInput :rules="rules">Nuværende adgangskode</RsTextInput>
-                    <RsTextInput :rules="rules">Ny adgangskode</RsTextInput>
-                    <RsTextInput :rules="rules">Gentag ny adgangskode</RsTextInput>
+                    <Stack direction="vertical" spacing="md">
+                        <RsTextInput :rules="rules">Nuværende adgangskode</RsTextInput>
+                        <RsTextInput :rules="rules">Ny adgangskode</RsTextInput>
+                        <RsTextInput :rules="rules">Gentag ny adgangskode</RsTextInput>
+                    </Stack>
                 </v-form>
             </v-card-text>
             <v-divider></v-divider>
@@ -47,12 +51,14 @@
 import RsTextInput from '@/components/rs-elements/RsTextInput'
 import RsSelectInput from '@/components/rs-elements/RsSelectInput'
 import RsBtn from '@/components/rs-elements/RsBtn'
+import Stack from '@/src/ui/Stack'
 
 export default {
     components: {
         RsTextInput,
         RsSelectInput,
-        RsBtn
+        RsBtn,
+        Stack
     },
     data(){
         return {

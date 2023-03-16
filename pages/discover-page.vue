@@ -25,30 +25,34 @@
             <RsTabs :items="tabs">
                 <v-row>
                     <v-col class="col-12 col-md-6 mt-2 pr-md-2">
-                        <RsTextInput placeholder="Placeholder">
-                            Ejendomstype
-                        </RsTextInput>
-                        <RsSelectInput placeholder="Placeholder">
-                            Ejerskabstype
-                        </RsSelectInput>
-                        <RsTreeView placeholder="Placeholder" :items="treeViewItems">
-                            Bygningens anvendelse
-                        </RsTreeView>
+                        <Stack direction="vertical" spacing="md">
+                            <RsTextInput placeholder="Placeholder">
+                                Ejendomstype
+                            </RsTextInput>
+                            <RsSelectInput placeholder="Placeholder">
+                                Ejerskabstype
+                            </RsSelectInput>
+                            <RsTreeView placeholder="Placeholder" :items="treeViewItems">
+                                Bygningens anvendelse
+                            </RsTreeView>
+                        </Stack>
                     </v-col>
                     <v-spacer></v-spacer>
                     <v-col class="col-12 col-md-6 mt-md-2 pl-md-2">
-                    <RsTextInputSplit placeholderLeft="From" placeholderRight="To">
-                        Antal enheder
-                    </RsTextInputSplit>
-                    <RsTextInputSplit placeholderLeft="From" placeholderRight="To">
-                        Beboelsesareal (Bygning)
-                    </RsTextInputSplit>
-                    <RsTextInputSplit placeholderLeft="From" placeholderRight="To">
-                        Erhvervsareal (Bygning)
-                    </RsTextInputSplit>
-                    <RsTextInputSplit placeholderLeft="From" placeholderRight="To">
-                        Opførelsesår
-                    </RsTextInputSplit>
+                        <Stack direction="vertical" spacing="md">
+                            <RsTextInputSplit placeholderLeft="From" placeholderRight="To">
+                                Antal enheder
+                            </RsTextInputSplit>
+                            <RsTextInputSplit placeholderLeft="From" placeholderRight="To">
+                                Beboelsesareal (Bygning)
+                            </RsTextInputSplit>
+                            <RsTextInputSplit placeholderLeft="From" placeholderRight="To">
+                                Erhvervsareal (Bygning)
+                            </RsTextInputSplit>
+                            <RsTextInputSplit placeholderLeft="From" placeholderRight="To">
+                                Opførelsesår
+                            </RsTextInputSplit>
+                        </Stack>
                 </v-col>
                 </v-row>
             </RsTabs>
@@ -67,6 +71,7 @@ import RsTreeView from '@/components/rs-elements/RsTreeView'
 import RsBtnDropdown from '@/components/rs-elements/RsBtnDropdown'
 import RsTextInputSplit from '../components/rs-elements/RsTextInputSplit.vue'
 import RsChip from '../components/rs-elements/RsChip.vue'
+import Stack from '@/src/ui/Stack'
 
 export default {
     components: {
@@ -78,7 +83,8 @@ export default {
     RsBtn,
     RsBtnDropdown,
     RsTextInputSplit,
-    RsChip
+    RsChip,
+    Stack
 },
     data(){
         return {

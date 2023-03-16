@@ -44,9 +44,6 @@ label{
 }
 
 .v-input{
-    // TODO - find solution for input field spacing – look into stacks
-    margin-bottom: 1.1rem !important;
-
     transition: .2s !important;
     &:hover, &:focus{
         transition: .2s !important;

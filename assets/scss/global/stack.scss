@@ -1,0 +1,88 @@
+.stack {
+    display: flex;
+    flex: 1 1 auto;
+    
+    // Direction
+    &.vertical {
+        flex-direction: column;
+    }
+    &.xs-vertical{
+        @media (min-width: $breakpoint-xs) {
+            flex-direction: column;
+        }
+    }
+    &.sm-vertical{
+        @media (min-width: $breakpoint-sm) {
+            flex-direction: column;
+        }
+    }
+    &.md-vertical{
+        @media (min-width: $breakpoint-md) {
+            flex-direction: column;
+        }
+    }
+    &.lg-vertical{
+        @media (min-width: $breakpoint-lg) {
+            flex-direction: column;
+        }
+    }
+    &.xl-vertical{
+        @media (min-width: $breakpoint-xl) {
+            flex-direction: column;
+        }
+    }
+    &.horizontal {
+        flex-direction: row;
+    }
+    &.xs-horizontal{
+        @media (min-width: $breakpoint-xs) {
+            flex-direction: row;
+        }
+    }
+    &.sm-horizontal{
+        @media (min-width: $breakpoint-sm) {
+            flex-direction: row;
+        }
+    }
+    &.md-horizontal{
+        @media (min-width: $breakpoint-md) {
+            flex-direction: row;
+        }
+    }
+    &.lg-horizontal{
+        @media (min-width: $breakpoint-lg) {
+            flex-direction: row;
+        }
+    }
+    &.xl-horizontal{
+        @media (min-width: $breakpoint-xl) {
+            flex-direction: row;
+        }
+    }
+
+    // Spacing
+    &.spacing-xxs{
+        gap: var(--rs-semantic-space-between-pattern-xxs);
+    }
+    &.spacing-xs{
+        gap: var(--rs-semantic-space-between-pattern-xs);
+    }
+    &.spacing-sm{
+        gap: var(--rs-semantic-space-between-pattern-sm);
+    }
+    &.spacing-md{
+        gap: var(--rs-semantic-space-between-pattern-md);
+    }
+    &.spacing-lg{
+        gap: var(--rs-semantic-space-between-pattern-lg);
+    }
+    &.spacing-xl{
+        gap: var(--rs-semantic-space-between-pattern-xl);
+    }
+}
+
+// .stack-child {
+//     flex-grow: 1;
+//     flex-basis: 0;
+//     min-width: 0;
+// }

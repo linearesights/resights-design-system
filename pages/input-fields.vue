@@ -1,28 +1,30 @@
 <template>
     <v-form class="ma-6">
-        <RsTextInput placeholder="Placeholder">
-            Text field - Medium
-        </RsTextInput>
-        <RsTextInput size="small" placeholder="Placeholder">
-            Text field - small
-        </RsTextInput>
-        <RsTextInput disabled placeholder="Placeholder">
-            Text field - disabled
-        </RsTextInput>
-        <RsTextInput icon="$searchIcon" placeholder="Placeholder">
-            Text field - w. icon
-        </RsTextInput>
-        <RsTextInputSplit placeholder="Placeholder">
-            Text field Split
-        </RsTextInputSplit>
-        <RsTextInputSplit disabled placeholder="Placeholder">
-            Text field Split - disabled
-        </RsTextInputSplit>
-        <RsSelectInput :items="items">Select</RsSelectInput>
-        <RsAutoComplete :items="items">Autocomplete</RsAutoComplete>
-        <RsDateInputSplit>Date input Split</RsDateInputSplit>
-        <RsComboInputSplit :itemsLeft="items" :itemsRight="items">Combobox - Split</RsComboInputSplit>
-        <RsTreeView placeholder="Placeholder" :items="treeViewItems">TreeView</RsTreeView>
+        <Stack direction="vertical" spacing="md">
+            <RsTextInput placeholder="Placeholder">
+                Text field - Medium
+            </RsTextInput>
+            <RsTextInput size="small" placeholder="Placeholder">
+                Text field - small
+            </RsTextInput>
+            <RsTextInput disabled placeholder="Placeholder">
+                Text field - disabled
+            </RsTextInput>
+            <RsTextInput icon="$searchIcon" placeholder="Placeholder">
+                Text field - w. icon
+            </RsTextInput>
+            <RsTextInputSplit placeholder="Placeholder">
+                Text field Split
+            </RsTextInputSplit>
+            <RsTextInputSplit disabled placeholder="Placeholder">
+                Text field Split - disabled
+            </RsTextInputSplit>
+            <RsSelectInput :items="items">Select</RsSelectInput>
+            <RsAutoComplete :items="items">Autocomplete</RsAutoComplete>
+            <RsDateInputSplit>Date input Split</RsDateInputSplit>
+            <RsComboInputSplit :itemsLeft="items" :itemsRight="items">Combobox - Split</RsComboInputSplit>
+            <RsTreeView placeholder="Placeholder" :items="treeViewItems">TreeView</RsTreeView>
+        </Stack>
     </v-form>
 </template>
 
@@ -34,6 +36,7 @@ import RsAutoComplete from '@/components/rs-elements/RsAutoComplete'
 import RsComboInputSplit from '@/components/rs-elements/RsComboInputSplit'
 import RsTreeView from '@/components/rs-elements/RsTreeView'
 import RsDateInputSplit from '@/components/rs-elements/RsDateInputSplit'
+import Stack from '@/src/ui/Stack'
 
 export default {
     components: {
@@ -43,7 +46,8 @@ export default {
         RsTextInputSplit,
         RsComboInputSplit,
         RsTreeView,
-        RsDateInputSplit
+        RsDateInputSplit,
+        Stack
     },
     data () {
         return {
