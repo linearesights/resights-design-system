@@ -1,6 +1,6 @@
 <template>
     <v-form class="ma-6">
-        <Stack direction="vertical" spacing="md">
+        <Stack :direction="['vertical']" spacing="md">
             <RsTextInput placeholder="Placeholder">
                 Text field - Medium
             </RsTextInput>

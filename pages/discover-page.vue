@@ -25,7 +25,7 @@
             <RsTabs :items="tabs">
                 <v-row>
                     <v-col class="col-12 col-md-6 mt-2 pr-md-2">
-                        <Stack direction="vertical" spacing="md">
+                        <Stack :direction="['vertical']" :spacing="['md']">
                             <RsTextInput placeholder="Placeholder">
                                 Ejendomstype
                             </RsTextInput>

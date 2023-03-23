@@ -1,7 +1,7 @@
 <template>
     <div>
         <label :for="inputId" :class="[labelIsEmphasized ? 'is-emphasized' : '', 'small']">
-            <slot>Label</slot>
+            <slot></slot>
         </label>
         <v-select
         solo

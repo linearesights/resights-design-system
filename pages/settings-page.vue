@@ -30,7 +30,7 @@
             <v-divider></v-divider>
             <v-card-text>
                 <v-form ref="form_two">
-                    <Stack direction="vertical" spacing="md">
+                    <Stack :direction="['vertical']" spacing="md">
                         <RsTextInput :rules="rules">Nuværende adgangskode</RsTextInput>
                         <RsTextInput :rules="rules">Ny adgangskode</RsTextInput>
                         <RsTextInput :rules="rules">Gentag ny adgangskode</RsTextInput>

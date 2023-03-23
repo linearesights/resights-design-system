@@ -1,13 +1,12 @@
 <template>
   <v-btn
     depressed
-    prepend-icon="mdi-cloud-upload"
     :class="variant"
     :small="size==='small'"
     :medium="size==='medium'"
     :large="size==='large'"
     :disabled="disabled"
-    :ripple=false
+    :ripple="false"
     >
     <v-icon v-if="icon">{{ icon }}</v-icon>
     <slot>Button</slot>
@@ -41,7 +40,7 @@ export default {
         type: String,
         default: '',
       },
-  },
+  }
 };
 
 </script>

@@ -38,6 +38,12 @@
         <RsBtn variant="ghost" size="small" disabled>Ghost</RsBtn>
       </div>
     </div>
+    <div class="d-flex align-center ma-4 mb-10">
+      <span>With icon</span>
+      <div class="d-flex">
+        <RsBtn variant="primary" size="medium" icon="$searchIcon">Primary</RsBtn>
+      </div>
+    </div>
     <v-divider></v-divider>
     <h2 class="ma-4 rs-semantic-text-lg-semi-bold">Icon buttons</h2>
     <v-divider></v-divider>

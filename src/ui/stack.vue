@@ -1,5 +1,5 @@
 <template>
-    <div class="stack" :class="`${direction} spacing-${spacing}`">
+    <div class="stack" :class="[direction, `space-${spacing}`]">
         <slot></slot>
     </div>
 </template>
@@ -8,20 +8,12 @@
 export default {
     props: {
         direction: {
-        type: String,
-        default: 'vertical',
-        // validator(value) {
-        // const directions = ["vertical", "horizontal"] // directions
-        // return directions.includes(value)
-        // },
+        type: Array,
+        default: () => (['vertical'])
       },
       spacing: {
-        type: String, 
-        default: '',
-        validator(value) {
-        const stackValues = ['xxs', 'xs', 'sm', 'md', 'lg', 'xl'] // stack spacing options
-        return stackValues.includes(value)
-        },
+        type: Array,
+        default: () => ([])
       }
     },
 }
